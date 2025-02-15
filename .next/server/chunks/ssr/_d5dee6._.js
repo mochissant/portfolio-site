@@ -387,7 +387,7 @@ function ProjectDetail({ projectId }) {
                     children: "Loading..."
                 }, void 0, false, {
                     fileName: "[project]/app/pages/ProjectDetail.tsx",
-                    lineNumber: 20,
+                    lineNumber: 19,
                     columnNumber: 24
                 }, this)
         });
@@ -395,7 +395,7 @@ function ProjectDetail({ projectId }) {
             project: project
         }, void 0, false, {
             fileName: "[project]/app/pages/ProjectDetail.tsx",
-            lineNumber: 22,
+            lineNumber: 21,
             columnNumber: 12
         }, this);
     }
@@ -403,7 +403,7 @@ function ProjectDetail({ projectId }) {
         project: project
     }, void 0, false, {
         fileName: "[project]/app/pages/ProjectDetail.tsx",
-        lineNumber: 25,
+        lineNumber: 24,
         columnNumber: 10
     }, this);
 }
