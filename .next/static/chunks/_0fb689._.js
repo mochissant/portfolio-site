@@ -304,13 +304,13 @@ function ProjectsList() {
                             className: "flex flex-col md:flex-row",
                             children: [
                                 project.image && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "relative w-full md:w-48 h-48 md:h-auto",
+                                    className: "relative w-full md:w-48 h-48 md:h-32",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                         src: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$data$2f$projectImages$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"][project.slug],
                                         alt: project.title,
-                                        fill: true,
-                                        className: "object-cover",
-                                        sizes: "(max-width: 768px) 100vw, 33vw",
+                                        width: 300,
+                                        height: 200,
+                                        className: "object-cover w-full h-full",
                                         priority: project.slug === 'nazosui'
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/ProjectsList.tsx",
