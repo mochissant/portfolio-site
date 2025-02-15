@@ -1,18 +1,21 @@
 
+import { Project } from '@/app/data/projects';
 import ProjectDetail from '../../pages/ProjectDetail';
 import { projects } from '../../data/projects';
 
-type PageProps = {
-  params: {
-    projectId: string;
-  };
+type Props = {
+  params: { projectId: string };
 };
 
-export default function ProjectDetailPage({ params }: PageProps) {
+export default function ProjectDetailPage({ params }: Props) {
   return <ProjectDetail projectId={params.projectId} />;
 }
 
-export function generateStaticParams(): { projectId: string }[] {
+type StaticParams = {
+  projectId: string;
+}[];
+
+export async function generateStaticParams(): Promise<StaticParams> {
   return projects.map((project) => ({
     projectId: project.slug,
   }));
