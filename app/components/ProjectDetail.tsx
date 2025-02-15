@@ -1,25 +1,52 @@
 
+// プロジェクト詳細を表示するコンポーネント
 import Image from 'next/image';
-import { projects } from '../data/projects';
+import Link from 'next/link';
+import { Project } from '../data/projects';
 import projectImages from '../data/projectImages';
-import { notFound } from 'next/navigation';
-import StandardLayout from './project-layouts/StandardLayout';
-import dynamic from 'next/dynamic';
 
-export default function ProjectDetail({ projectId }: { projectId: string }) {
-  const project = projects.find((p) => p.slug === projectId);
+type ProjectDetailProps = {
+  projectId: string;
+}
 
-  if (!project) {
-    notFound();
-  }
+export default function ProjectDetail({ projectId }: ProjectDetailProps) {
+  // プロジェクトIDに対応するプロジェクト情報を取得
+  const project = projects.find(p => p.slug === projectId);
+  if (!project) return <div>プロジェクトが見つかりません</div>;
 
-  if (project.layout === 'custom') {
-    const CustomLayout = dynamic(
-      () => import(`./project-layouts/${project.slug}`),
-      { loading: () => <div>Loading...</div> }
-    );
-    return <CustomLayout project={project} />;
-  }
-
-  return <StandardLayout project={project} />;
+  return (
+    <div>
+      {/* 戻るリンク */}
+      <Link href="/work">
+        ← プロジェクト一覧に戻る
+      </Link>
+      
+      {/* プロジェクトのメイン情報 */}
+      <h1>{project.title}</h1>
+      
+      {/* プロジェクト画像 */}
+      {project.image && (
+        <div>
+          <Image
+            src={projectImages[project.slug]}
+            alt={project.title}
+            fill
+            priority
+          />
+        </div>
+      )}
+      
+      {/* プロジェクトの詳細情報 */}
+      <div>
+        <p>{project.description}</p>
+        <p>制作年月: {project.year}年{project.month}月</p>
+        <p>クライアント: {project.client}</p>
+        {project.url && (
+          <a href={project.url} target="_blank" rel="noopener noreferrer">
+            プロジェクトを見る →
+          </a>
+        )}
+      </div>
+    </div>
+  );
 }
