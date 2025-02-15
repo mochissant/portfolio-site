@@ -57,6 +57,9 @@ export default function ProjectsList() {
                     width={300}
                     height={200}
                     layoutId={`project-image-${project.slug}`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
                   />
                   : <motion.div className="projectCardImagePlaceholder" layoutId={`project-image-${project.slug}`}></motion.div>}
               </div>
