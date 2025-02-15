@@ -2,28 +2,26 @@
 import { projects } from '../../data/projects';
 import dynamic from 'next/dynamic';
 
-type PageProps = {
-  params: { projectId: string };
-};
+type Props = {
+  params: {
+    projectId: string
+  }
+}
 
-export default function ProjectDetailPage({ params }: PageProps) {
+export default function ProjectDetailPage({ params }: Props) {
   const project = projects.find(p => p.slug === params.projectId);
   if (!project) return <div>プロジェクトが見つかりません</div>;
 
-  // 動的にレイアウトファイルを読み込む
-  const CustomLayout = dynamic(
-    () => import(`../../components/project-layouts/${project.slug}`),
-    { 
-      loading: () => <div>Loading...</div>,
-      ssr: true 
-    }
+  const ProjectLayout = dynamic(
+    () => import(`../../components/project-layouts/${params.projectId}`), 
+    { ssr: true }
   );
 
-  return <CustomLayout project={project} />;
+  return <ProjectLayout project={project} />;
 }
 
 export function generateStaticParams() {
-  return projects.map((project) => ({
-    projectId: project.slug
+  return projects.map(project => ({
+    projectId: project.slug,
   }));
 }
