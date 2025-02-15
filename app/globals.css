@@ -20,7 +20,7 @@
   --black: #212121;
   /*漆黒*/
   --white: #ffffff;
-  
+
   /* プライマリな色*/
   --main-color: var(--black);
   --main-bg-color: var(--gray50);
@@ -78,7 +78,7 @@ button{
 header {
   height: var(--header-height);
   display: flex;
-  flec-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   padding: 0 var(--padding-sm);

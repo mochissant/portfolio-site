@@ -10,16 +10,19 @@ import { motion } from 'framer-motion';
 export default function Header() {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
-  const toggleModalOpen = () =>{isModalOpen ? setIsModalOpen(false) : setIsModalOpen(true)}
+  const toggleModalOpen = () => {
+    setIsModalOpen(!isModalOpen)
+  }
   
   return (
     <header>
-        <h1>
-          <Link href ="/">ポートフォリオ</Link>          </h1>
-        <button onClick={toggleModalOpen} >
-          menu
-        </button>
-        <Modal isOpen={isModalOpen} onClose={toggleModalOpen} />
+      <h1>
+        <Link href="/Home">ポートフォリオ</Link>
+      </h1>
+      <button onClick={toggleModalOpen}>
+        menu
+      </button>
+      <Modal isOpen={isModalOpen} onClose={toggleModalOpen} />
     </header>
   )
 }
