@@ -167,6 +167,14 @@ header {
   padding-top: var(--padding-lg);
 }
 
+@media (min-width: 500px) {
+  .projectListContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--margin-md);
+  }
+}
+
 .tagButtonContainer{
   width: 100%;
   display: flex;
