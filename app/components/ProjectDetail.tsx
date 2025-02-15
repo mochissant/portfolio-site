@@ -2,7 +2,7 @@
 // プロジェクト詳細を表示するコンポーネント
 import Image from 'next/image';
 import Link from 'next/link';
-import { Project } from '../data/projects';
+import { Project, projects } from '../data/projects';
 import projectImages from '../data/projectImages';
 
 type ProjectDetailProps = {

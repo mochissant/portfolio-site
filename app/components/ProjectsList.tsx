@@ -7,7 +7,7 @@ import projectImages from '../data/projectImages';
 
 export default function ProjectsList() {
   return (
-    <div>
+    <div className="flex flex-col space-y-6">
       {projects.map((project) => (
         // 各プロジェクトのカード
         <Link href={`/work/${project.slug}`} key={project.slug}>
