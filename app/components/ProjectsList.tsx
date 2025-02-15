@@ -14,12 +14,14 @@ export default function ProjectsList() {
           className="block bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
         >
           {project.image && (
-            <div className="relative h-48">
+            <div className="relative h-48 w-full">
               <Image
                 src={projectImages[project.slug]}
                 alt={project.title}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover"
+                priority={project.slug === 'nazosui'}
               />
             </div>
           )}
