@@ -23,7 +23,7 @@ export default function Header() {
   
   return (
     <header>
-        <Link href="/">
+        <Link href="/" className="moveHeader header-h1">
           <div className="moveHeader">
             <motion.div
               className="header-box"

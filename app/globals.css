@@ -80,17 +80,21 @@ header {
   flex-direction: row;
   justify-content: space-between;
   padding: 0 var(--padding-sm);
+  gap: var(--padding-xl);
 }
 
 .moveHeader{
   display: flex;
   flex-direction: row;
+  align-items: center;
   width: 100%;
   flex-grow: 1;
+  gap: var(--margin-md);
 }
 
 .header-h1 {
   font-size: var(--fontsize-sm);
+  text-decoration: none !important;
 }
 
 .header-box {
