@@ -1,0 +1,102 @@
+### **Replit AI に送る指示（根本的な問題の修正をすべて依頼する）**
+```
+`app/work/[projectId]/page.tsx` で `params` が `Promise<any>` として扱われ、Next.js のビルドでエラーが発生する問題を根本的に解決してください。
+
+---
+
+### **問題の概要**
+- `params` の型が `{ projectId: string }` ではなく `Promise<any>` になってしまい、Next.js の型推論により `PageProps` の制約を満たしていない。
+- `app` ディレクトリと `pages` ディレクトリが混在しているため、Next.js の型推論が混乱している可能性がある。
+- `.next` のキャッシュや TypeScript の設定 (`tsconfig.json`) に問題がある可能性がある。
+
+---
+
+### **やるべき修正**
+
+#### ✅ **1. `tsconfig.json` の `include` に `app` を追加**
+現在の `tsconfig.json` に `app` ディレクトリが含まれていない可能性があるため、以下のように修正してください。
+
+```json
+"include": [
+  "next-env.d.ts",
+  ".next/types/**/*.ts",
+  "**/*.ts",
+  "**/*.tsx",
+  "app"
+]
+```
+
+---
+
+#### ✅ **2. `pages/` フォルダをリネーム**
+`app/` ディレクトリを使用している場合、`pages/` フォルダが影響を与える可能性があるため、一時的にリネームして Next.js の `App Router` の動作を安定させる。
+
+```sh
+mv app/pages app/pages_backup
+```
+
+その後、型エラーが解消されるか確認する。
+
+---
+
+#### ✅ **3. `generateStaticParams` の型を明示的に修正**
+現在の `generateStaticParams` の戻り値の型が Next.js に正しく認識されていない可能性があるため、以下のように明示的に修正してください。
+
+```tsx
+export function generateStaticParams(): { projectId: string }[] {
+  return [{ projectId: "example-id" }];
+}
+```
+
+もし型エラーが続く場合は、`Promise.resolve()` を使用して Next.js に `Promise` を期待させる。
+
+```tsx
+export function generateStaticParams(): Promise<{ projectId: string }[]> {
+  return Promise.resolve([{ projectId: "example-id" }]);
+}
+```
+
+---
+
+#### ✅ **4. `.next` のキャッシュを削除してビルド**
+Next.js の `.next/types` キャッシュが破損している可能性があるため、一度削除して `npm install` からやり直す。
+
+```sh
+rm -rf .next
+rm -rf node_modules
+rm package-lock.json
+npm install
+npm run build
+```
+
+その後、Vercel でデプロイ。
+
+```sh
+vercel --force
+```
+
+---
+
+#### ✅ **5. `next-env.d.ts` を削除し、再生成**
+`next-env.d.ts` が影響を与えている可能性があるため、一度削除し、`npm run build` で再生成する。
+
+```sh
+rm system/next-env.d.ts
+npm run build
+```
+
+---
+
+### **やることの優先順位**
+1. `tsconfig.json` の `include` に `"app"` を追加
+2. `pages/` ディレクトリを一時的にリネーム (`pages_backup`)
+3. `generateStaticParams` の型を修正
+4. `.next` のキャッシュと `node_modules` を削除してクリーンインストール
+5. `next-env.d.ts` を削除して再生成
+
+上記を実施して、`params` の型が `Promise<any>` ではなく `{ projectId: string }` になるように修正してください。
+```
+
+---
+
+この指示を Replit AI に送れば、根本的な修正をすべて実行するように促せます！🚀
