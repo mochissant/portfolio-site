@@ -258,11 +258,11 @@ header {
 .projectCardImagePlaceholder {
   width: 100%;
   height: 200px;
-  borderRadius: 0;
+  border-radius: 0;
   display: flex;
-  alignItems: center;
-  justifyContent: center;
-  backgroundColor: var(--gray100);
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gray100);
 }
 
 .projectDetailContainer {
