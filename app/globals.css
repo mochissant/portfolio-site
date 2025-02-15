@@ -1,58 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: var(--main-bg-color);
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --main-font: "Zen Kaku Gothic New", serif;
+  --background: #ffffff;
+  --foreground: #171717;
+}
 
-  --gray50: #f6f7f8;
-  --gray100: #e8e8e8;
-  --purple: #be84b8;
-  --black: #212121;
-
-  --main-color: var(--black);
-  --main-bg-color: var(--gray50);
-
-  --margin-sm: 8px;
-  --margin-md: 16px;
-  --margin-lg: 24px;
-  --margin-xl: 32px;
-  --margin-xxl: 64px;
-
-  --padding-sm: 4px;
-  --padding-md: 8px;
-  --padding-lg: 16px;
-  --padding-xl: 24px;
-  --padding-xxl: 32px;
-  --button-height: 44px;
-
-  --header-height: 48px;
-
-  --fontsize-sm: 12px;
-  --fontsize-md: 16px;
-  --fontsize-lg: 20px;
-  --fontsize-xl: 24px;
-
-  --borderradius-sm: 4px;
-  --borderradius-md: 8px;
-  --borderradius-lg: 12px;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
 }
 
 body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Zen Kaku Gothic New', sans-serif;
   height: 100vh;
-  background-color: var(--gray50);
   display: flex;
   flex-direction: column;
   padding-top: var(--header-height);
   padding-right: var(--padding-lg);
   padding-left: var(--padding-lg);
   z-index: 0;
-  font-family: var(--main-font);
 }
 
 h1 {
