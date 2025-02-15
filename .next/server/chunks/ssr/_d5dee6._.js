@@ -425,7 +425,7 @@ async function ProjectDetailPage({ params }) {
         projectId: params.projectId
     }, void 0, false, {
         fileName: "[project]/app/work/[projectId]/page.tsx",
-        lineNumber: 13,
+        lineNumber: 9,
         columnNumber: 10
     }, this);
 }
