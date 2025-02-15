@@ -9,15 +9,16 @@ type Props = {
   }
 }
 
-export default function ProjectDetailPage({ params }: Props) {
-  const project = projects.find(p => p.slug === params.projectId);
-  console.log("params:", params); // ここで params の型を確認
+export default async function ProjectDetailPage({ params }: Props) {
+  const projectId = params.projectId;
+  const project = projects.find(p => p.slug === projectId);
+  
   if (!project) {
     notFound();
   }
 
   const ProjectLayout = dynamic(
-    () => import(`../../components/project-layouts/${params.projectId}`),
+    () => import(`../../components/project-layouts/${projectId}`),
     { 
       loading: () => <div>Loading...</div>,
       ssr: true 
