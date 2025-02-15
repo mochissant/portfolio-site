@@ -303,7 +303,7 @@ function ProjectDetailPage() {
                 id: ()=>"[project]/app/components/project-layouts/towerush.tsx [app-ssr] (ecmascript, async loader)",
                 module: ()=>__turbopack_require__("[project]/app/components/project-layouts/towerush.tsx [app-ssr] (ecmascript, async loader)")(__turbopack_import__)
             }
-        }).import(`../../components/project-layouts/${projectId}`).then((mod)=>mod.default), {
+        }).import(`../../components/project-layouts/${projectId}`), {
         loading: ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 children: "Loading..."
             }, void 0, false, {

@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///home/runner/workspace/app/components/Modal.tsx"],"sourcesContent":["// このファイルはナビゲーションメニューのモーダルコンポーネントを提供します\n'use client'\n\nimport Link from 'next/link'\n\ninterface ModalProps {\n  isOpen: boolean\n  onClose: () => void\n  children?: React.ReactNode\n}\n\nconst Modal = ({ isOpen, onClose, children }: ModalProps) => {\n  if (!isOpen) return null\n\n  return (\n    <div onClick={onClose}>\n      <div onClick={(e) => e.stopPropagation()}>\n        {children}\n        <nav>\n          <div>\n            <Link href=\"/\" onClick={onClose}>\n              ホーム\n            </Link>\n          </div>\n          <div>\n            <Link href=\"/work\" onClick={onClose}>\n              作品一覧\n            </Link>\n          </div>\n        </nav>\n      </div>\n    </div>\n  )\n}\n\nexport default Modal"],"names":[],"mappings":"AAAA,uCAAuC;;;;;AAGvC;AAFA;;;AAUA,MAAM,QAAQ,CAAC,EAAE,MAAM,EAAE,OAAO,EAAE,QAAQ,EAAc;IACtD,IAAI,CAAC,QAAQ,OAAO;IAEpB,qBACE,6LAAC;QAAI,SAAS;kBACZ,cAAA,6LAAC;YAAI,SAAS,CAAC,IAAM,EAAE,eAAe;;gBACnC;8BACD,6LAAC;;sCACC,6LAAC;sCACC,cAAA,6LAAC,+JAAA,CAAA,UAAI;gCAAC,MAAK;gCAAI,SAAS;0CAAS;;;;;;;;;;;sCAInC,6LAAC;sCACC,cAAA,6LAAC,+JAAA,CAAA,UAAI;gCAAC,MAAK;gCAAQ,SAAS;0CAAS;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAQjD;KAtBM;uCAwBS"}},
-    {"offset": {"line": 81, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}
