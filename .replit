@@ -1,0 +1,11 @@
+modules = ["nodejs-20"]
+[workflows]
+runButton = "Run"
+
+[[workflows.workflow]]
+name = "Run"
+author = 39536624
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm run dev"
