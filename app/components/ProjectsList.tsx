@@ -6,6 +6,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { projects } from "../data/projects";
 import projectImages from "../data/projectImages";
+import { motion } from "framer-motion";
 
 const allTags = [...new Set(projects.flatMap((project) => project.tag))];
 
@@ -50,21 +51,20 @@ export default function ProjectsList() {
             <div className="projectCardContents">
               <div className="projectCardImage">
                 {project.image !== null 
-                  ? <Image
+                  ? <motion.img
                     src={projectImages[project.slug]}
                     alt={project.title}
                     width={300}
                     height={200}
-                    priority={project.slug === "nazosui"}
+                    layoutId={`project-image-${project.slug}`}
                   />
-                  : <div className="projectCardImagePlaceholder"></div>}
+                  : <motion.div className="projectCardImagePlaceholder" layoutId={`project-image-${project.slug}`}></motion.div>}
               </div>
-              <div>
-                <h2>{project.title}</h2>
-                <p>{project.description}</p>
-                <div>
+              <div className="projectCardTItleArea">
+                <h2 className="projectCardTitle">{project.title}</h2>
+                <div className="projectCardTagArea">
                   {project.tag.map((tag) => (
-                    <span key={tag}>{tag}</span>
+                    <span key={tag} className="projectCardTag">#{tag}</span>
                   ))}
                 </div>
               </div>

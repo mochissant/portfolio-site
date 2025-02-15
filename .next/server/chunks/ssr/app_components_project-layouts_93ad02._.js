@@ -6,7 +6,7 @@ var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_
 {
 __turbopack_export_value__((__turbopack_import__) => {
     return Promise.all([
-  "server/chunks/ssr/_7a92c7._.js"
+  "server/chunks/ssr/app_components_project-layouts_lightriddlefes_tsx_d0cba1._.js"
 ].map((chunk) => __turbopack_load__(chunk))).then(() => {
         return __turbopack_import__("[project]/app/components/project-layouts/lightriddlefes.tsx [app-ssr] (ecmascript)");
     });
@@ -42,7 +42,7 @@ var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_
 {
 __turbopack_export_value__((__turbopack_import__) => {
     return Promise.all([
-  "server/chunks/ssr/_dcc2a1._.js"
+  "server/chunks/ssr/app_components_project-layouts_towerush_tsx_3397e5._.js"
 ].map((chunk) => __turbopack_load__(chunk))).then(() => {
         return __turbopack_import__("[project]/app/components/project-layouts/towerush.tsx [app-ssr] (ecmascript)");
     });

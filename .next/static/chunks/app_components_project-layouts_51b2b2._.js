@@ -6,7 +6,6 @@ var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_
 {
 __turbopack_export_value__((__turbopack_import__) => {
     return Promise.all([
-  "static/chunks/node_modules_next_15251b._.js",
   "static/chunks/app_components_project-layouts_lightriddlefes_tsx_f43ee9._.js",
   "static/chunks/app_components_project-layouts_lightriddlefes_tsx_9141e3._.js"
 ].map((chunk) => __turbopack_load__(chunk))).then(() => {
@@ -48,7 +47,6 @@ var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_
 {
 __turbopack_export_value__((__turbopack_import__) => {
     return Promise.all([
-  "static/chunks/node_modules_next_15251b._.js",
   "static/chunks/app_components_project-layouts_towerush_tsx_68ed38._.js",
   "static/chunks/app_components_project-layouts_towerush_tsx_9141e3._.js"
 ].map((chunk) => __turbopack_load__(chunk))).then(() => {

@@ -24,7 +24,8 @@
   --padding-md: 8px;
   --padding-lg: 16px;
   --padding-xl: 24px;
-  --padding-xxl: 32px --button-height: 44px;
+  --padding-xxl: 32px;
+  --button-height: 44px;
   --header-height: 48px;
   --fontsize-sm: 12px;
   --fontsize-md: 16px;
@@ -33,6 +34,7 @@
   --borderradius-sm: 4px;
   --borderradius-md: 8px;
   --borderradius-lg: 12px;
+  --borderradius-all: 999px;
 }
 
 body {
@@ -43,6 +45,11 @@ body {
   padding: 0;
   z-index: 0;
   font-family: var(--main-font);
+}
+
+a {
+  all: unset;
+  display: inline;
 }
 
 h1 {
@@ -158,8 +165,11 @@ header {
 .projectCard {
   width: 100%;
   padding: var(--padding-md);
+  padding-bottom: var(--padding-lg);
   display: flex;
-  gap: var(--margin-md);
+  gap: var(--margin-sm);
+  border-radius: var(--borderradius-md);
+  background-color: var(--white);
 }
 
 .projectCardContents {
@@ -170,8 +180,7 @@ header {
   justify-content: center;
   align-items: center;
   gap: var(--margin-md);
-  border-radius: var(--borderradius-md);
-  background-color: var(--white);
+  background-color: #0000;
 }
 
 .projectCardImage {
@@ -186,6 +195,10 @@ header {
   object-fit: cover;
 }
 
+.projectCardImage img:hover {
+  opacity: .3;
+}
+
 .projectCardImagePlaceholder {
   width: 100%;
   height: 200px;
@@ -196,18 +209,61 @@ header {
   background-color: var(--gray100);
 }
 
+.projectCardTItleArea {
+  background-color: #0000;
+  width: 100%;
+  padding-left: var(--padding-md);
+  padding-right: var(--padding-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: var(--margin-sm);
+}
+
+.projectCardTitle {
+  font-size: var(--fontsize-lg);
+  font-weight: bold;
+  font-color: var(--main-color);
+  text-decoration: none;
+  background-color: #0000;
+}
+
+.projectCardTagArea {
+  background-color: #0000;
+}
+
+.projectCardTag {
+  background-color: #0000;
+  color: var(--purple);
+  border: 1px solid var(--purple);
+  padding-top: var(--padding-sm);
+  padding-bottom: var(--padding-sm);
+  padding-left: var(--padding-md);
+  padding-right: var(--padding-md);
+  border-radius: var(--borderradius-all);
+  margin-right: var(--margin-sm);
+}
+
 .projectDetailContainer {
   display: flex;
   flex-direction: column;
   gap: var(--margin-md);
-  align-items: center;
+  align-items: left;
 }
 
 .projectDetailImage {
-  width: 100%;
+  width: 100vw;
+  left: calc(var(--margin-md) * -.5);
   height: 56.25%;
   overflow: hidden;
   position: relative;
+}
+
+.projectDetailImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=app_globals_b52d8e.css.map*/
