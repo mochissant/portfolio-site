@@ -22,14 +22,17 @@ export default function ProjectDetail({ projectId }: ProjectDetailProps) {
       <h1 className="text-4xl font-bold mb-6">{project.title}</h1>
       
       {project.image && (
-        <div className="relative w-full aspect-video mb-8">
-          <Image
-            src={projectImages[project.slug]}
-            alt={project.title}
-            className="object-cover rounded-lg"
-            fill
-            priority
-          />
+        <div className="relative w-full h-[400px] mb-8">
+          <div className="relative w-full h-full">
+            <Image
+              src={projectImages[project.slug]}
+              alt={project.title}
+              className="object-cover rounded-lg"
+              style={{ position: 'absolute' }}
+              fill
+              priority
+            />
+          </div>
         </div>
       )}
       

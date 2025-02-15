@@ -48,17 +48,20 @@ export function StandardLayout({ project }: { project: Project }) {
       <div className="max-w-5xl mx-auto p-8">
         <div>
           <h1 className="text-4xl font-bold mb-4">{project.title}</h1>
-          <div className="relative w-full h-[300px]"> {/* Placeholder for image */}
+          <div className="relative w-full h-[300px]">
             {projectImage ? (
-              <Image
-                src={projectImage}
-                alt={project.title}
-                fill
-                className="object-cover"
-                priority
-              />
+              <div className="relative w-full h-full">
+                <Image
+                  src={projectImage}
+                  alt={project.title}
+                  fill
+                  className="object-cover rounded-lg"
+                  style={{ position: 'absolute' }}
+                  priority
+                />
+              </div>
             ) : (
-              <div className="w-full h-full bg-gray-100" />
+              <div className="w-full h-full bg-gray-100 rounded-lg" />
             )}
           </div>
           <p className="text-lg mt-4">{project.description}</p>
