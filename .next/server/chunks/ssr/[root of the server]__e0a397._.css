@@ -137,6 +137,8 @@ button {
   padding-bottom: var(--padding-md);
   padding-left: var(--padding-md);
   padding-right: var(--padding-md);
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 header {

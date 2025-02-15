@@ -157,6 +157,7 @@ header {
   min-Height: 44px;
 }
 
+/*ここからwork*/
 .projectListContainer{
   display: flex;
   flex-direction: column;
@@ -184,7 +185,6 @@ header {
   padding: var(--padding-lg), var(--padding-sm);
 }
 
-/*ここからwork*/
 .projectCard{
   width:100%;
   padding: var(--padding-md);
