@@ -1,4 +1,3 @@
-
 import ProjectDetail from '../../pages/ProjectDetail';
 
 type PageProps = {
@@ -7,5 +6,7 @@ type PageProps = {
 };
 
 export default async function ProjectDetailPage({ params }: PageProps) {
-  return <ProjectDetail projectId={params.projectId} />;
+  const { projectId } = params as { projectId: string }; // 型を明示
+
+  return <ProjectDetail projectId={projectId} />;
 }
