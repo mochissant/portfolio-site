@@ -1,21 +1,21 @@
 
-import ProjectDetail from '../../pages_backup/ProjectDetail';
+import { Project } from '@/app/data/projects';
+import ProjectDetail from '../../pages/ProjectDetail';
 import { projects } from '../../data/projects';
 
 type Props = {
-  params: {
-    projectId: string;
-  };
+  params: { projectId: string };
 };
 
-export default async function ProjectDetailPage({ params }: Props) {
-  const project = projects.find((p) => p.slug === params.projectId);
-  if (!project) return null;
-  
+export default function ProjectDetailPage({ params }: Props) {
   return <ProjectDetail projectId={params.projectId} />;
 }
 
-export async function generateStaticParams() {
+type StaticParams = {
+  projectId: string;
+}[];
+
+export async function generateStaticParams(): Promise<StaticParams> {
   return projects.map((project) => ({
     projectId: project.slug,
   }));
