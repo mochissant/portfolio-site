@@ -1,17 +1,16 @@
 
-import ProjectDetail from '../../pages/ProjectDetail';
-import { projects } from '../../data/projects';
+import ProjectDetail from '../../components/ProjectDetail';
 
-type Props = {
-  params: { projectId: string };
-  searchParams?: { [key: string]: string | string[] | undefined };
-};
-
-export default function ProjectDetailPage({ params }: Props) {
+export default function ProjectDetailPage({
+  params,
+}: {
+  params: { projectId: string }
+}) {
   return <ProjectDetail projectId={params.projectId} />;
 }
 
 export function generateStaticParams() {
+  const projects = require('../../data/projects').projects;
   return projects.map((project) => ({
     projectId: project.slug
   }));
