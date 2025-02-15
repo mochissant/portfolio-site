@@ -79,6 +79,7 @@ header {
   padding: 0 var(--padding-sm);
   gap: var(--padding-xl);
   position: fixed;
+  z-index: 9999;
 }
 
 .moveHeader {
@@ -258,6 +259,7 @@ header {
   height: 56.25%;
   overflow: hidden;
   position: relative;
+  z-index: 1;
 }
 
 .projectDetailImage img {

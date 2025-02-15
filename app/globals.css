@@ -98,6 +98,7 @@ header {
   padding: 0 var(--padding-sm);
   gap: var(--padding-xl);
   position:fixed;
+  z-index: 9999;
 }
 
 .moveHeader{
