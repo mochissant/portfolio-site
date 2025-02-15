@@ -26,9 +26,6 @@ export default function LightRiddleFesLayout({ project }: { project: Project }) 
                 width={300}
                 height={200}
                 layoutId={`project-image-${project.slug}`}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
               />
               : <div className="projectCardImagePlaceholder"></div>}
           </div>
