@@ -1,86 +1,90 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap');
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--main-bg-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --main-font: "Zen Kaku Gothic New", serif;
+
+  /*色系*/
+  --gray50: #f6f7f8;
+  /*月白*/
+  --gray100: #e8e8e8;
+  /*灰色*/
+  --purple: #be84b8;
+  /*若紫*/
+  --black: #212121;
+  /*漆黒*/
+  --white: #ffffff;
+  
+  /* プライマリな色*/
+  --main-color: var(--black);
+  --main-bg-color: var(--gray50);
+
+  /*サイズ系変数*/
+  --margin-sm: 8px;
+  --margin-md: 16px;
+  --margin-lg: 24px;
+  --margin-xl: 32px;
+  --margin-xxl: 64px;
+
+  --padding-sm: 4px;
+  --padding-md: 8px;
+  --padding-lg: 16px;
+  --padding-xl: 24px;
+  --padding-xxl: 32px --button-height: 44px;
+
+  --header-height: 48px;
+
+  --fontsize-sm: 12px;
+  --fontsize-md: 16px;
+  --fontsize-lg: 20px;
+  --fontsize-xl: 24px;
+
+  --borderradius-sm: 4px;
+  --borderradius-md: 8px;
+  --borderradius-lg: 12px;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: 'Zen Kaku Gothic New', sans-serif;
   height: 100vh;
+  background-color: var(--gray50);
   display: flex;
   flex-direction: column;
-  padding-top: var(--header-height);
+  padding-top: 0;
   padding-right: var(--padding-lg);
   padding-left: var(--padding-lg);
   z-index: 0;
+  font-family: var(--main-font);
 }
 
+/*ここからテキスト*/
 h1 {
   font-family: var(--main-font);
   color: var(--main-color);
 }
 
+/*ここからコンポーネント*/
+button{
+  min-height: 44px;
+  min-width: 44px;
+  border: none;
+}
+
 header {
-  width: 100%;
   height: var(--header-height);
-  background-color: var(--main-bg-color);
   display: flex;
-  justify-content: left;
-  gap: var(--margin-md);
   align-items: center;
-  padding: var(--padding-sm);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
+  justify-content: space-between;
+  padding: 0 var(--padding-sm);
 }
 
 .header-h1 {
   font-size: var(--fontsize-sm);
-}
-
-.hamburger-button {
-  border: none;
-  background: none;
-  cursor: pointer;
-  padding: var(--padding-sm);
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.hamburger-line {
-  width: 24px;
-  height: 2px;
-  background-color: var(--main-color);
-  transition: all 0.3s ease;
-}
-
-.hamburger-button:hover .hamburger-line {
-  background-color: var(--purple);
-}
-
-.menu-text {
-  font-size: var(--fontsize-sm);
-  margin-left: var(--margin-sm);
-  color: var(--main-color);
-}
-
-.hamburger-button {
-  display: flex;
-  align-items: center;
 }
 
 .header-box {
@@ -91,43 +95,61 @@ header {
 
 .modal-overlay {
   position: fixed;
-  top: 0;
+  top: var(--header-height);
   left: 0;
+  height: 100%;
   width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: var(--main-bg-color);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: var(--margin-md);
   align-items: center;
   z-index: 1000;
 }
 
-.modal-content {
-  background: white;
-  padding: 40px;
-  width: 100%;
-  height: 100vh;
+.projectListContainer{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 20px;
+  align-items: center;
+  gap: var(--margin-md);
 }
 
-.modal-content a {
-  font-size: 24px;
-  text-decoration: none;
-  color: black;
-  transition: color 0.3s;
+.tagButtonContainer{
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  gap: var(--margin-md);
 }
 
-.modal-content a:hover {
-  color: #666;
+.tagButton{
+  background-color: var(--white);
+  padding: var(--padding-lg), var(--padding-sm);
 }
 
-@media screen and (min-width: 768px) {
-  /* PC styles */
+.tagButtonSelected{
+  background-color: var(--black);
+  color: var(--white);
+  padding: var(--padding-lg), var(--padding-sm);
 }
 
-@media screen and (max-width: 767px) {
-  /* Mobile styles */
+.projectCard{
+  width:100%;
+  padding: var(--padding-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--margin-md);
+  border-radius: var(--borderradius-md);
+  background-color: var(--white);
+}
+
+.projectDetailContainer{
+  display: flex;
+  flex-direction: column;
+  gap: var(--margin-md);
+}
+
+.projectDetailImage{
+  max-height:60px;
+  max-width:80px;
+  position: relative;
 }

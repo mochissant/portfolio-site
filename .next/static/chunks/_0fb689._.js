@@ -256,7 +256,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$data$2f$projects$2e$t
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$data$2f$projectImages$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/app/data/projectImages.ts [app-client] (ecmascript)");
 ;
 var _s = __turbopack_refresh__.signature();
-'use client';
+"use client";
 ;
 ;
 ;
@@ -276,112 +276,103 @@ function ProjectsList() {
         return a.slug.localeCompare(b.slug);
     });
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "flex flex-col w-full max-w-4xl mx-auto px-4 py-6 gap-6",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex flex-wrap gap-2",
+                className: "tagButtonContainer",
                 children: allTags.map((tag)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         onClick: ()=>toggleTag(tag),
-                        className: `px-3 py-1 text-sm rounded-full border transition-colors
-              ${selectedTag === tag ? 'bg-gray-800 text-white border-gray-800' : 'bg-white text-gray-800 border-gray-300 hover:border-gray-800'}`,
+                        className: `tagButton
+              ${selectedTag === tag ? "tagButtonSelected" : "bg-white text-gray-800 border-gray-300 hover:border-gray-800"}`,
                         children: tag
                     }, tag, false, {
                         fileName: "[project]/app/components/ProjectsList.tsx",
-                        lineNumber: 28,
+                        lineNumber: 30,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/app/components/ProjectsList.tsx",
-                lineNumber: 26,
+                lineNumber: 28,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "grid grid-cols-1 gap-6",
+                className: "projectListContainer",
                 children: sortedProjects.map((project)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         href: `/work/${project.slug}`,
-                        className: "group block bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex flex-col md:flex-row",
+                            className: "projectCard",
                             children: [
                                 project.image && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "relative w-full md:w-48 h-48 md:h-32",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                         src: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$data$2f$projectImages$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"][project.slug],
                                         alt: project.title,
                                         width: 300,
                                         height: 200,
-                                        className: "object-cover w-full h-full",
-                                        priority: project.slug === 'nazosui'
+                                        priority: project.slug === "nazosui"
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/ProjectsList.tsx",
-                                        lineNumber: 53,
+                                        lineNumber: 52,
                                         columnNumber: 19
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/ProjectsList.tsx",
-                                    lineNumber: 52,
+                                    lineNumber: 51,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "flex flex-col p-4 flex-grow",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                            className: "text-xl font-bold mb-2 group-hover:text-gray-600",
                                             children: project.title
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/ProjectsList.tsx",
-                                            lineNumber: 64,
+                                            lineNumber: 62,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-gray-600 mb-4 line-clamp-2",
                                             children: project.description
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/ProjectsList.tsx",
-                                            lineNumber: 67,
+                                            lineNumber: 63,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "flex flex-wrap gap-2 mt-auto",
                                             children: project.tag.map((tag)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "px-2 py-1 text-sm bg-gray-100 rounded-full",
                                                     children: tag
                                                 }, tag, false, {
                                                     fileName: "[project]/app/components/ProjectsList.tsx",
-                                                    lineNumber: 72,
+                                                    lineNumber: 66,
                                                     columnNumber: 21
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/ProjectsList.tsx",
-                                            lineNumber: 70,
+                                            lineNumber: 64,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/components/ProjectsList.tsx",
-                                    lineNumber: 63,
+                                    lineNumber: 61,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/components/ProjectsList.tsx",
-                            lineNumber: 50,
+                            lineNumber: 49,
                             columnNumber: 13
                         }, this)
                     }, project.slug, false, {
                         fileName: "[project]/app/components/ProjectsList.tsx",
-                        lineNumber: 45,
+                        lineNumber: 48,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/app/components/ProjectsList.tsx",
-                lineNumber: 43,
+                lineNumber: 46,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/components/ProjectsList.tsx",
-        lineNumber: 24,
+        lineNumber: 26,
         columnNumber: 5
     }, this);
 }
