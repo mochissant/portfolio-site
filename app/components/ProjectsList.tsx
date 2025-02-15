@@ -1,4 +1,6 @@
 
+'use client'
+
 // プロジェクト一覧を表示するコンポーネント
 import Link from 'next/link';
 import Image from 'next/image';
