@@ -1,5 +1,4 @@
 
-import { Project } from '@/app/data/projects';
 import ProjectDetail from '../../pages_backup/ProjectDetail';
 import { projects } from '../../data/projects';
 
@@ -9,13 +8,15 @@ type Props = {
   };
 };
 
-export default function ProjectDetailPage({ params }: Props) {
+export default async function ProjectDetailPage({ params }: Props) {
+  const project = projects.find((p) => p.slug === params.projectId);
+  if (!project) return null;
+  
   return <ProjectDetail projectId={params.projectId} />;
 }
 
-export async function generateStaticParams(): Promise<Array<{ projectId: string }>> {
-  const paths = projects.map((project) => ({
+export async function generateStaticParams() {
+  return projects.map((project) => ({
     projectId: project.slug,
   }));
-  return paths;
 }
