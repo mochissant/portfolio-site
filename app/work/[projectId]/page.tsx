@@ -1,6 +1,12 @@
 
 import ProjectDetail from '../../pages/ProjectDetail';
 
-export default function ProjectDetailPage({ params }: { params: { projectId: string } }) {
+type Props = {
+  params: {
+    projectId: string;
+  };
+};
+
+export default async function ProjectDetailPage({ params }: Props) {
   return <ProjectDetail projectId={params.projectId} />;
 }
