@@ -1,10 +1,11 @@
 
 import ProjectDetail from '../../pages/ProjectDetail';
 
-interface Props {
+type PageProps = {
   params: { projectId: string };
-}
+  searchParams: { [key: string]: string | string[] | undefined };
+};
 
-export default function ProjectDetailPage({ params }: Props) {
+export default async function ProjectDetailPage({ params }: PageProps) {
   return <ProjectDetail projectId={params.projectId} />;
 }
