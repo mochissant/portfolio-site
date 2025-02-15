@@ -2,17 +2,18 @@
 import ProjectDetail from '../../pages/ProjectDetail';
 import { projects } from '../../data/projects';
 
-type Props = {
-  params: { projectId: string };
-  searchParams?: { [key: string]: string | string[] | undefined };
+type PageProps = {
+  params: {
+    projectId: string;
+  };
 };
 
-export default function ProjectDetailPage(props: Props) {
-  return <ProjectDetail projectId={props.params.projectId} />;
+export default function ProjectDetailPage({ params }: PageProps) {
+  return <ProjectDetail projectId={params.projectId} />;
 }
 
-export function generateStaticParams(): Array<{ projectId: string }> {
+export function generateStaticParams(): { projectId: string }[] {
   return projects.map((project) => ({
-    projectId: project.slug
+    projectId: project.slug,
   }));
 }
