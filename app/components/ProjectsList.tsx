@@ -5,7 +5,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { projects } from "../data/projects";
 import projectImages from "../data/projectImages";
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
 const allTags = [...new Set(projects.flatMap((project) => project.tag))];
 

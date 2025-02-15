@@ -279,6 +279,7 @@ header {
   height: 56.25%;
   overflow: hidden;
   position: relative;
+  z-index: 1;
 }
 
 .projectDetailImage img{
