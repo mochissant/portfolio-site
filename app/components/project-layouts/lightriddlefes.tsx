@@ -17,7 +17,6 @@ export default function LightRiddleFesLayout({ project }: { project: Project }) 
 
         <div className="projectDetailContainer">
           <h1 className="">{project.title}</h1>
-          
           <div className="projectDetailImage">
             {project.image !== null 
               ? <motion.img

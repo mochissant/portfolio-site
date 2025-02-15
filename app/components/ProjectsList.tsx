@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -51,24 +50,35 @@ export default function ProjectsList() {
 
       <div className="projectListContainer">
         {sortedProjects.map((project) => (
-          <Link href={`/work/${project.slug}`} key={project.slug} className="projectCard">
+          <Link
+            href={`/work/${project.slug}`}
+            key={project.slug}
+            className="projectCard"
+          >
             <div className="projectCardContents">
               <div className="projectCardImage">
-                {project.image !== null 
-                  ? <motion.img
+                {project.image !== null ? (
+                  <motion.img
                     src={projectImages[project.slug]}
                     alt={project.title}
                     width={300}
                     height={200}
                     layoutId={`project-image-${project.slug}`}
                   />
-                  : <motion.div className="projectCardImagePlaceholder" layoutId={`project-image-${project.slug}`}></motion.div>}
+                ) : (
+                  <motion.div
+                    className="projectCardImagePlaceholder"
+                    layoutId={`project-image-${project.slug}`}
+                  ></motion.div>
+                )}
               </div>
               <div className="projectCardTItleArea">
                 <h2 className="projectCardTitle">{project.title}</h2>
                 <div className="projectCardTagArea">
                   {project.tag.map((tag) => (
-                    <span key={tag} className="projectCardTag">#{tag}</span>
+                    <span key={tag} className="projectCardTag">
+                      #{tag}
+                    </span>
                   ))}
                 </div>
               </div>
