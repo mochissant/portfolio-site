@@ -18,7 +18,7 @@ export default function ProjectsList() {
                 src={projectImages[project.slug]}
                 alt={project.title}
                 fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                sizes="(max-height: 100px)"
                 priority={project.slug === 'nazosui'}
               />
             </div>

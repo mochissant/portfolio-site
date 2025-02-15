@@ -1,76 +1,5 @@
 module.exports = {
 
-"[project]/app/data/projects.ts [app-rsc] (ecmascript)": ((__turbopack_context__) => {
-"use strict";
-
-var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: __turbopack_require_stub__ } = __turbopack_context__;
-{
-__turbopack_esm__({
-    "projects": (()=>projects)
-});
-const projects = [
-    {
-        slug: "nazosui",
-        title: "ナゾスイ",
-        description: "川崎水族館での謎解き",
-        tag: [
-            "nazo",
-            "editorial"
-        ],
-        image: "nazosui.jpg",
-        layout: "standard",
-        year: 2023,
-        month: 4,
-        url: "http://nazosui.kawa-sui.com/",
-        client: "RIDDLER"
-    },
-    {
-        slug: "maitsuki",
-        title: "毎月謎コン",
-        description: "毎月謎コン様のメインビジュアルやロゴなどのグラフィックデザインを担当しました！</ br>「毎月、面白かった謎解きを集めよう」といったカジュアルな企画なため、グラフィックも親しみを持てるような温かい配色にしたり、「いかにも謎解き公演に居そう」な人たちを描いてみたりしています。",
-        tag: [
-            "logo",
-            "graphic"
-        ],
-        image: "maitsuki.jpg",
-        layout: "custom",
-        year: 2023,
-        month: 4,
-        url: "https://x.com/nazocontest",
-        client: "毎月謎コン"
-    },
-    {
-        slug: "towerush",
-        title: "TOWERUSH",
-        description: "東京タワーでのイベント",
-        tag: [
-            "logo",
-            "graphic",
-            "event"
-        ],
-        image: null,
-        layout: "standard",
-        year: 2023,
-        month: 12,
-        url: "https://x.com/towerush_q",
-        client: "TOWERUSH"
-    },
-    {
-        slug: "lightriddlefes",
-        title: "ライト謎解きフェス ロゴ",
-        description: "東京タワーでのイベント",
-        tag: [
-            "logo"
-        ],
-        image: "lightriddlefes.jpg",
-        layout: "standard",
-        year: 2024,
-        month: 7,
-        url: "https://x.com/lightriddlefes",
-        client: "TOWERUSH"
-    }
-];
-}}),
 "[project]/public/images/K2-10th.jpg [app-rsc] (static)": ((__turbopack_context__) => {
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, t: __turbopack_require_real__ } = __turbopack_context__;
@@ -218,124 +147,229 @@ const projectImages = {
 };
 const __TURBOPACK__default__export__ = projectImages;
 }}),
-"[project]/app/components/ProjectsList.tsx [app-rsc] (ecmascript)": ((__turbopack_context__) => {
+"[project]/app/components/ProjectDetail.tsx [app-rsc] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: __turbopack_require_stub__ } = __turbopack_context__;
 {
-// プロジェクト一覧を表示するコンポーネント
+// プロジェクト詳細を表示するコンポーネント
 __turbopack_esm__({
-    "default": (()=>ProjectsList)
+    "default": (()=>ProjectDetail)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js [app-rsc] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/client/app-dir/link.js [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/image.js [app-rsc] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$data$2f$projects$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/app/data/projects.ts [app-rsc] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/client/app-dir/link.js [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$data$2f$projectImages$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/app/data/projectImages.ts [app-rsc] (ecmascript)");
 ;
 ;
 ;
 ;
-;
-function ProjectsList() {
+function ProjectDetail({ projectId }) {
+    // プロジェクトIDに対応するプロジェクト情報を取得
+    const project = projects.find((p)=>p.slug === projectId);
+    if (!project) return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        children: "プロジェクトが見つかりません"
+    }, void 0, false, {
+        fileName: "[project]/app/components/ProjectDetail.tsx",
+        lineNumber: 15,
+        columnNumber: 24
+    }, this);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        children: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$data$2f$projects$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["projects"].map((project)=>// 各プロジェクトのカード
+        children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                href: `/work/${project.slug}`,
+                href: "/work",
+                children: "← プロジェクト一覧に戻る"
+            }, void 0, false, {
+                fileName: "[project]/app/components/ProjectDetail.tsx",
+                lineNumber: 20,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                children: project.title
+            }, void 0, false, {
+                fileName: "[project]/app/components/ProjectDetail.tsx",
+                lineNumber: 25,
+                columnNumber: 7
+            }, this),
+            project.image && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                    src: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$data$2f$projectImages$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"][project.slug],
+                    alt: project.title,
+                    fill: true,
+                    priority: true
+                }, void 0, false, {
+                    fileName: "[project]/app/components/ProjectDetail.tsx",
+                    lineNumber: 30,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/app/components/ProjectDetail.tsx",
+                lineNumber: 29,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 children: [
-                    project.image && // プロジェクトのサムネイル画像
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                            src: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$data$2f$projectImages$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"][project.slug],
-                            alt: project.title,
-                            fill: true,
-                            sizes: "(max-height: 100px)",
-                            priority: project.slug === 'nazosui'
-                        }, void 0, false, {
-                            fileName: "[project]/app/components/ProjectsList.tsx",
-                            lineNumber: 17,
-                            columnNumber: 15
-                        }, this)
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        children: project.description
                     }, void 0, false, {
-                        fileName: "[project]/app/components/ProjectsList.tsx",
-                        lineNumber: 16,
-                        columnNumber: 13
+                        fileName: "[project]/app/components/ProjectDetail.tsx",
+                        lineNumber: 41,
+                        columnNumber: 9
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                children: project.title
-                            }, void 0, false, {
-                                fileName: "[project]/app/components/ProjectsList.tsx",
-                                lineNumber: 28,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                children: project.description
-                            }, void 0, false, {
-                                fileName: "[project]/app/components/ProjectsList.tsx",
-                                lineNumber: 30,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                children: project.tag.map((tag)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        children: tag
-                                    }, tag, false, {
-                                        fileName: "[project]/app/components/ProjectsList.tsx",
-                                        lineNumber: 34,
-                                        columnNumber: 17
-                                    }, this))
-                            }, void 0, false, {
-                                fileName: "[project]/app/components/ProjectsList.tsx",
-                                lineNumber: 32,
-                                columnNumber: 13
-                            }, this)
+                            "制作年月: ",
+                            project.year,
+                            "年",
+                            project.month,
+                            "月"
                         ]
                     }, void 0, true, {
-                        fileName: "[project]/app/components/ProjectsList.tsx",
-                        lineNumber: 26,
+                        fileName: "[project]/app/components/ProjectDetail.tsx",
+                        lineNumber: 42,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        children: [
+                            "クライアント: ",
+                            project.client
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/app/components/ProjectDetail.tsx",
+                        lineNumber: 43,
+                        columnNumber: 9
+                    }, this),
+                    project.url && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                        href: project.url,
+                        target: "_blank",
+                        rel: "noopener noreferrer",
+                        children: "プロジェクトを見る →"
+                    }, void 0, false, {
+                        fileName: "[project]/app/components/ProjectDetail.tsx",
+                        lineNumber: 45,
                         columnNumber: 11
                     }, this)
                 ]
-            }, project.slug, true, {
-                fileName: "[project]/app/components/ProjectsList.tsx",
-                lineNumber: 13,
-                columnNumber: 9
-            }, this))
-    }, void 0, false, {
-        fileName: "[project]/app/components/ProjectsList.tsx",
-        lineNumber: 10,
+            }, void 0, true, {
+                fileName: "[project]/app/components/ProjectDetail.tsx",
+                lineNumber: 40,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/app/components/ProjectDetail.tsx",
+        lineNumber: 18,
         columnNumber: 5
     }, this);
 }
 }}),
-"[project]/app/work/page.tsx [app-rsc] (ecmascript)": ((__turbopack_context__) => {
+"[project]/app/data/projects.ts [app-rsc] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: __turbopack_require_stub__ } = __turbopack_context__;
 {
 __turbopack_esm__({
-    "default": (()=>ProjectsPage)
+    "projects": (()=>projects)
+});
+const projects = [
+    {
+        slug: "nazosui",
+        title: "ナゾスイ",
+        description: "川崎水族館での謎解き",
+        tag: [
+            "nazo",
+            "editorial"
+        ],
+        image: "nazosui.jpg",
+        layout: "standard",
+        year: 2023,
+        month: 4,
+        url: "http://nazosui.kawa-sui.com/",
+        client: "RIDDLER"
+    },
+    {
+        slug: "maitsuki",
+        title: "毎月謎コン",
+        description: "毎月謎コン様のメインビジュアルやロゴなどのグラフィックデザインを担当しました！</ br>「毎月、面白かった謎解きを集めよう」といったカジュアルな企画なため、グラフィックも親しみを持てるような温かい配色にしたり、「いかにも謎解き公演に居そう」な人たちを描いてみたりしています。",
+        tag: [
+            "logo",
+            "graphic"
+        ],
+        image: "maitsuki.jpg",
+        layout: "custom",
+        year: 2023,
+        month: 4,
+        url: "https://x.com/nazocontest",
+        client: "毎月謎コン"
+    },
+    {
+        slug: "towerush",
+        title: "TOWERUSH",
+        description: "東京タワーでのイベント",
+        tag: [
+            "logo",
+            "graphic",
+            "event"
+        ],
+        image: null,
+        layout: "standard",
+        year: 2023,
+        month: 12,
+        url: "https://x.com/towerush_q",
+        client: "TOWERUSH"
+    },
+    {
+        slug: "lightriddlefes",
+        title: "ライト謎解きフェス ロゴ",
+        description: "東京タワーでのイベント",
+        tag: [
+            "logo"
+        ],
+        image: "lightriddlefes.jpg",
+        layout: "standard",
+        year: 2024,
+        month: 7,
+        url: "https://x.com/lightriddlefes",
+        client: "TOWERUSH"
+    }
+];
+}}),
+"[project]/app/work/[projectId]/page.tsx [app-rsc] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: __turbopack_require_stub__ } = __turbopack_context__;
+{
+__turbopack_esm__({
+    "default": (()=>ProjectDetailPage),
+    "generateStaticParams": (()=>generateStaticParams)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js [app-rsc] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ProjectsList$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/app/components/ProjectsList.tsx [app-rsc] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ProjectDetail$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/app/components/ProjectDetail.tsx [app-rsc] (ecmascript)");
 ;
 ;
-function ProjectsPage() {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ProjectsList$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
-        fileName: "[project]/app/work/page.tsx",
-        lineNumber: 4,
+function ProjectDetailPage({ params }) {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ProjectDetail$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+        projectId: params.projectId
+    }, void 0, false, {
+        fileName: "[project]/app/work/[projectId]/page.tsx",
+        lineNumber: 9,
         columnNumber: 10
     }, this);
 }
+function generateStaticParams() {
+    const projects = __turbopack_require__("[project]/app/data/projects.ts [app-rsc] (ecmascript)").projects;
+    return projects.map((project)=>({
+            projectId: project.slug
+        }));
+}
 }}),
-"[project]/app/work/page.tsx [app-rsc] (ecmascript, Next.js server component)": ((__turbopack_context__) => {
+"[project]/app/work/[projectId]/page.tsx [app-rsc] (ecmascript, Next.js server component)": ((__turbopack_context__) => {
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, t: __turbopack_require_real__ } = __turbopack_context__;
 {
-__turbopack_export_namespace__(__turbopack_import__("[project]/app/work/page.tsx [app-rsc] (ecmascript)"));
+__turbopack_export_namespace__(__turbopack_import__("[project]/app/work/[projectId]/page.tsx [app-rsc] (ecmascript)"));
 }}),
-"[project]/.next-internal/server/app/work/page/actions.js [app-rsc] (ecmascript)": (function(__turbopack_context__) {
+"[project]/.next-internal/server/app/work/[projectId]/page/actions.js [app-rsc] (ecmascript)": (function(__turbopack_context__) {
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, m: module, e: exports, t: __turbopack_require_real__ } = __turbopack_context__;
 {
@@ -343,4 +377,4 @@ var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_
 
 };
 
-//# sourceMappingURL=_123b02._.js.map
+//# sourceMappingURL=_da58dc._.js.map
