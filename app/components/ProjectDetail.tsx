@@ -10,39 +10,52 @@ type ProjectDetailProps = {
 }
 
 export default function ProjectDetail({ projectId }: ProjectDetailProps) {
-  // プロジェクトIDに対応するプロジェクト情報を取得
   const project = projects.find(p => p.slug === projectId);
   if (!project) return <div>プロジェクトが見つかりません</div>;
 
   return (
-    <div>
-      {/* 戻るリンク */}
-      <Link href="/work">
+    <div className="max-w-4xl mx-auto px-4 py-8">
+      <Link href="/work" className="inline-block mb-8 text-gray-600 hover:text-gray-900 transition-colors">
         ← プロジェクト一覧に戻る
       </Link>
       
-      {/* プロジェクトのメイン情報 */}
-      <h1>{project.title}</h1>
+      <h1 className="text-4xl font-bold mb-6">{project.title}</h1>
       
-      {/* プロジェクト画像 */}
       {project.image && (
-        <div>
+        <div className="relative w-full aspect-video mb-8">
           <Image
             src={projectImages[project.slug]}
             alt={project.title}
+            className="object-cover rounded-lg"
             fill
             priority
           />
         </div>
       )}
       
-      {/* プロジェクトの詳細情報 */}
-      <div>
-        <p>{project.description}</p>
-        <p>制作年月: {project.year}年{project.month}月</p>
-        <p>クライアント: {project.client}</p>
+      <div className="space-y-6">
+        <p className="text-lg leading-relaxed">{project.description}</p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-600">
+          <p>制作年月: {project.year}年{project.month}月</p>
+          <p>クライアント: {project.client}</p>
+        </div>
+        
+        <div className="flex flex-wrap gap-2">
+          {project.tag.map((tag) => (
+            <span key={tag} className="px-3 py-1 bg-gray-100 rounded-full text-sm">
+              {tag}
+            </span>
+          ))}
+        </div>
+
         {project.url && (
-          <a href={project.url} target="_blank" rel="noopener noreferrer">
+          <a 
+            href={project.url} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-block mt-4 px-6 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
+          >
             プロジェクトを見る →
           </a>
         )}
