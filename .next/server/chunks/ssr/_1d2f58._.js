@@ -223,6 +223,8 @@ const __TURBOPACK__default__export__ = projectImages;
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: __turbopack_require_stub__ } = __turbopack_context__;
 {
+// このファイルは標準的なプロジェクト詳細ページのレイアウトを提供します
+// プロジェクトの基本情報（タイトル、画像、説明文など）を表示します
 __turbopack_esm__({
     "default": (()=>StandardLayout)
 });
@@ -236,118 +238,123 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$data$2f$projectImages
 ;
 function StandardLayout({ project }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "projectDetailContainer",
-            children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                    href: "/work",
-                    children: "← プロジェクト一覧に戻る"
+        className: "max-w-4xl mx-auto px-4 py-8",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                href: "/work",
+                className: "inline-block mb-8 hover:opacity-70",
+                children: "← プロジェクト一覧に戻る"
+            }, void 0, false, {
+                fileName: "[project]/app/components/project-layouts/StandardLayout.tsx",
+                lineNumber: 14,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                className: "text-4xl font-bold mb-6",
+                children: project.title
+            }, void 0, false, {
+                fileName: "[project]/app/components/project-layouts/StandardLayout.tsx",
+                lineNumber: 19,
+                columnNumber: 7
+            }, this),
+            project.image && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "mb-8 aspect-video relative",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                    src: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$data$2f$projectImages$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"][project.slug],
+                    alt: project.title,
+                    className: "rounded-lg object-cover",
+                    fill: true,
+                    sizes: "(max-width: 768px) 100vw, 50vw",
+                    priority: true
                 }, void 0, false, {
-                    fileName: "[project]/app/components/project-layouts/StandardLayout.tsx",
-                    lineNumber: 10,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                    children: project.title
-                }, void 0, false, {
-                    fileName: "[project]/app/components/project-layouts/StandardLayout.tsx",
-                    lineNumber: 12,
-                    columnNumber: 9
-                }, this),
-                project.image && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "projectDetailImage",
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                        src: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$data$2f$projectImages$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"][project.slug],
-                        alt: project.title,
-                        fill: true
-                    }, void 0, false, {
-                        fileName: "[project]/app/components/project-layouts/StandardLayout.tsx",
-                        lineNumber: 16,
-                        columnNumber: 13
-                    }, this)
-                }, void 0, false, {
-                    fileName: "[project]/app/components/project-layouts/StandardLayout.tsx",
-                    lineNumber: 15,
-                    columnNumber: 11
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            children: project.description
-                        }, void 0, false, {
-                            fileName: "[project]/app/components/project-layouts/StandardLayout.tsx",
-                            lineNumber: 25,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    children: [
-                                        "制作年月: ",
-                                        project.year,
-                                        "年",
-                                        project.month,
-                                        "月"
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/app/components/project-layouts/StandardLayout.tsx",
-                                    lineNumber: 28,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    children: [
-                                        "クライアント: ",
-                                        project.client
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/app/components/project-layouts/StandardLayout.tsx",
-                                    lineNumber: 31,
-                                    columnNumber: 13
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/app/components/project-layouts/StandardLayout.tsx",
-                            lineNumber: 27,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            children: project.tag.map((tag)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    children: tag
-                                }, tag, false, {
-                                    fileName: "[project]/app/components/project-layouts/StandardLayout.tsx",
-                                    lineNumber: 36,
-                                    columnNumber: 15
-                                }, this))
-                        }, void 0, false, {
-                            fileName: "[project]/app/components/project-layouts/StandardLayout.tsx",
-                            lineNumber: 34,
-                            columnNumber: 11
-                        }, this),
-                        project.url && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                            href: project.url,
-                            target: "_blank",
-                            rel: "noopener noreferrer",
-                            children: "プロジェクトを見る →"
-                        }, void 0, false, {
-                            fileName: "[project]/app/components/project-layouts/StandardLayout.tsx",
-                            lineNumber: 41,
-                            columnNumber: 13
-                        }, this)
-                    ]
-                }, void 0, true, {
                     fileName: "[project]/app/components/project-layouts/StandardLayout.tsx",
                     lineNumber: 24,
-                    columnNumber: 9
+                    columnNumber: 11
                 }, this)
-            ]
-        }, void 0, true, {
-            fileName: "[project]/app/components/project-layouts/StandardLayout.tsx",
-            lineNumber: 9,
-            columnNumber: 7
-        }, this)
-    }, void 0, false, {
+            }, void 0, false, {
+                fileName: "[project]/app/components/project-layouts/StandardLayout.tsx",
+                lineNumber: 23,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "space-y-6",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "text-lg leading-relaxed",
+                        children: project.description
+                    }, void 0, false, {
+                        fileName: "[project]/app/components/project-layouts/StandardLayout.tsx",
+                        lineNumber: 37,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "grid gap-4 text-gray-600",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                children: [
+                                    "制作年月: ",
+                                    project.year,
+                                    "年",
+                                    project.month,
+                                    "月"
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/app/components/project-layouts/StandardLayout.tsx",
+                                lineNumber: 40,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                children: [
+                                    "クライアント: ",
+                                    project.client
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/app/components/project-layouts/StandardLayout.tsx",
+                                lineNumber: 41,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/app/components/project-layouts/StandardLayout.tsx",
+                        lineNumber: 39,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex flex-wrap gap-2",
+                        children: project.tag.map((tag)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "px-3 py-1 bg-gray-100 rounded-full text-sm",
+                                children: tag
+                            }, tag, false, {
+                                fileName: "[project]/app/components/project-layouts/StandardLayout.tsx",
+                                lineNumber: 47,
+                                columnNumber: 13
+                            }, this))
+                    }, void 0, false, {
+                        fileName: "[project]/app/components/project-layouts/StandardLayout.tsx",
+                        lineNumber: 45,
+                        columnNumber: 9
+                    }, this),
+                    project.url && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                        href: project.url,
+                        target: "_blank",
+                        rel: "noopener noreferrer",
+                        className: "inline-block px-6 py-2 bg-gray-900 text-white rounded-lg hover:opacity-80",
+                        children: "プロジェクトを見る →"
+                    }, void 0, false, {
+                        fileName: "[project]/app/components/project-layouts/StandardLayout.tsx",
+                        lineNumber: 55,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/app/components/project-layouts/StandardLayout.tsx",
+                lineNumber: 36,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
         fileName: "[project]/app/components/project-layouts/StandardLayout.tsx",
-        lineNumber: 8,
+        lineNumber: 12,
         columnNumber: 5
     }, this);
 }

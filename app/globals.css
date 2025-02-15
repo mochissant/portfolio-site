@@ -78,6 +78,7 @@ button{
 header {
   height: var(--header-height);
   display: flex;
+  flec-direction: column;
   align-items: center;
   justify-content: space-between;
   padding: 0 var(--padding-sm);
