@@ -24,7 +24,13 @@ export default function ProjectsList() {
   });
 
   return (
-    <div className="mainContainer">
+    <motion.div
+      className="mainContainer"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3 }}
+    >
       <h1>Work</h1>
       {/* タグフィルター */}
       <div className="tagButtonContainer">
