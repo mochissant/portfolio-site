@@ -1,4 +1,6 @@
+
 import ProjectDetail from '../../pages/ProjectDetail';
+import { projects } from '../../data/projects';
 
 type Props = {
   params: { projectId: string };
@@ -6,11 +8,11 @@ type Props = {
 };
 
 export default function ProjectDetailPage({ params }: Props) {
-  console.log("params:", params); // Vercelのログで確認
   return <ProjectDetail projectId={params.projectId} />;
 }
 
-// 🔹 generateStaticParams を追加（Next.js に動的ルートの情報を明示）
-export async function generateStaticParams() {
-  return [{ projectId: "example-id" }]; // 本番ではAPIからデータを取得する
+export function generateStaticParams() {
+  return projects.map((project) => ({
+    projectId: project.slug
+  }));
 }
