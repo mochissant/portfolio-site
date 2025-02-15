@@ -48,19 +48,17 @@ export default function ProjectsList() {
         {sortedProjects.map((project) => (
           <Link href={`/work/${project.slug}`} key={project.slug}  className="projectCard">
             <div className="projectCardContents">
-              {project.image && (
-                <div className="projectCardImage">
-                  {project.image !== null 
-                    ? <Image
-                        src={projectImages[project.slug]}
-                        alt={project.title}
-                        width={300}
-                        height={200}
-                        priority={project.slug === "nazosui"}
-                      />
-                    : <div className="projectCardImagePlaceholder"></div>}
-                </div>
-              )}
+              <div className="projectCardImage">
+                {project.image !== null 
+                  ? <Image
+                    src={projectImages[project.slug]}
+                    alt={project.title}
+                    width={300}
+                    height={200}
+                    priority={project.slug === "nazosui"}
+                  />
+                  : <div className="projectCardImagePlaceholder"></div>}
+              </div>
               <div>
                 <h2>{project.title}</h2>
                 <p>{project.description}</p>
