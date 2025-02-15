@@ -1,7 +1,7 @@
 
 'use client'
 
-import { projects } from '../../data/projects';
+import { projects, Project } from '../../data/projects';
 import dynamic from 'next/dynamic';
 import { notFound } from 'next/navigation';
 import { useParams } from 'next/navigation';
@@ -18,12 +18,12 @@ export default function ProjectDetailPage() {
   }
 
   const ProjectLayout = dynamic(
-    () => import(`../../components/project-layouts/${projectId}`).then(mod => mod.default),
+    () => import(`../../components/project-layouts/${projectId}`),
     { 
       loading: () => <div>Loading...</div>,
       ssr: true 
     }
-  );
+  ) as React.ComponentType<{project: Project}>;
 
   return <ProjectLayout project={project} />;
 }
