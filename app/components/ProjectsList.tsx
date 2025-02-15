@@ -23,7 +23,8 @@ export default function ProjectsList() {
   });
 
   return (
-    <div>
+    <div className="mainContainer">
+      <h1>Work</h1>
       {/* タグフィルター */}
       <div className="tagButtonContainer">
         {allTags.map((tag) => (
@@ -45,17 +46,19 @@ export default function ProjectsList() {
       {/* プロジェクトリスト */}
       <div className="projectListContainer">
         {sortedProjects.map((project) => (
-          <Link href={`/work/${project.slug}`} key={project.slug}>
-            <div className="projectCard">
+          <Link href={`/work/${project.slug}`} key={project.slug}  className="projectCard">
+            <div className="projectCardContents">
               {project.image && (
-                <div>
-                  <Image
-                    src={projectImages[project.slug]}
-                    alt={project.title}
-                    width={300}
-                    height={200}
-                    priority={project.slug === "nazosui"}
-                  />
+                <div className="projectCardImage">
+                  {project.image !== null 
+                    ? <Image
+                        src={projectImages[project.slug]}
+                        alt={project.title}
+                        width={300}
+                        height={200}
+                        priority={project.slug === "nazosui"}
+                      />
+                    : <div className="projectCardImagePlaceholder"></div>}
                 </div>
               )}
               <div>

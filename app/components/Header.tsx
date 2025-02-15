@@ -39,7 +39,7 @@ export default function Header() {
             >mochissant</motion.h1>
           </div>
         </Link>
-      <button onClick={toggleModalOpen}>menu</button>
+      <button onClick={toggleModalOpen}>{isModalOpen ? "close" : "menu"}</button>
       <Modal isOpen={isModalOpen} onClose={toggleModalOpen} />
     </header>
   )
