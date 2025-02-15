@@ -1,5 +1,5 @@
 import ProjectsList from '../pages/ProjectsList';
 
-export default function ProjectsPage() {
+export default async function ProjectsPage() {
   return <ProjectsList />;
 }

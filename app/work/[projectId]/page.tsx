@@ -7,7 +7,7 @@ type Props = {
   params: { projectId: string };
 };
 
-export default function ProjectDetailPage({ params }: Props) {
+export default async function ProjectDetailPage({ params }: Props) {
   return <ProjectDetail projectId={params.projectId} />;
 }
 
