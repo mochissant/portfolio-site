@@ -1,11 +1,11 @@
 import ProjectDetail from '../../pages/ProjectDetail';
 
-type PageProps = {
+type Props = {
   params: { projectId: string };
   searchParams?: { [key: string]: string | string[] | undefined };
 };
 
-export default function ProjectDetailPage({ params }: PageProps) {
+export default function ProjectDetailPage({ params }: Props) {
   console.log("params:", params); // Vercelのログで確認
   return <ProjectDetail projectId={params.projectId} />;
 }
