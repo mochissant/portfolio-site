@@ -17,7 +17,7 @@ export default function Header() {
   return (
     <header>
       <h1>
-        <Link href="/Home">ポートフォリオ</Link>
+        <Link href="/">ポートフォリオ</Link>
       </h1>
       <button onClick={toggleModalOpen}>
         menu
