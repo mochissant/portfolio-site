@@ -18,7 +18,7 @@ export default function ProjectDetailPage() {
   }
 
   const ProjectLayout = dynamic(
-    () => import(`../../components/project-layouts/${projectId}`),
+    () => import(`../../components/project-layouts/${projectId}`).then(mod => mod.default),
     { 
       loading: () => <div>Loading...</div>,
       ssr: true 
