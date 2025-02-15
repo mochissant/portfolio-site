@@ -1,4 +1,5 @@
 import { StaticImageData } from "next/image";
+import projectImages from './projectImages';
 
 export interface ProjectImage {
   [key: string]: StaticImageData;
@@ -9,7 +10,7 @@ export type Project = {
   title: string;
   description: string;
   tag: string[];
-  image: StaticImageData | null;
+  image: string | null;
   layout: string;
   year: number;
   month: number;
@@ -23,7 +24,7 @@ export const projects: Project[] = [
     title: "ナゾスイ",
     description: "川崎水族館での謎解き",
     tag: ["nazo", "editorial"],
-    image: "nazosui.jpg",
+    image: projectImages['nazosui'],
     layout: "standard",
     year: 2023,
     month: 4,
