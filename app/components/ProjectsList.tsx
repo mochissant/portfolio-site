@@ -49,13 +49,13 @@ export default function ProjectsList() {
           >
             <div className="flex flex-col md:flex-row">
               {project.image && (
-                <div className="relative w-full md:w-48 h-48 md:h-auto">
+                <div className="relative w-full md:w-48 h-48 md:h-32">
                   <Image
                     src={projectImages[project.slug]}
                     alt={project.title}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    width={300}
+                    height={200}
+                    className="object-cover w-full h-full"
                     priority={project.slug === 'nazosui'}
                   />
                 </div>
