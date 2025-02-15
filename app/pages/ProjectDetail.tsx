@@ -1,4 +1,4 @@
-// このファイルは個々のプロジェクトの詳細ページを表示するためのコンポーネントです
+
 import Image from 'next/image';
 import { projects } from '../data/projects';
 import projectImages from '../data/projectImages';
@@ -15,7 +15,7 @@ export default function ProjectDetail({ projectId }: { projectId: string }) {
 
   if (project.layout === 'custom') {
     const CustomLayout = dynamic(
-      () => import(`../components/project-layouts/${project.slug}`).then(mod => mod.default),
+      () => import(`../components/project-layouts/${project.slug}`),
       { loading: () => <div>Loading...</div> }
     );
     return <CustomLayout project={project} />;

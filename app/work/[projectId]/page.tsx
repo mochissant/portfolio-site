@@ -1,10 +1,14 @@
 
 import ProjectDetail from '../../pages/ProjectDetail';
+import { Metadata } from 'next';
 
-export default async function ProjectDetailPage({
-  params,
-}: {
-  params: { projectId: string };
-}) {
+type Props = {
+  params: {
+    projectId: string;
+  };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+export default function ProjectDetailPage({ params }: Props) {
   return <ProjectDetail projectId={params.projectId} />;
 }
