@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -31,4 +32,53 @@ export default function RootLayout({
       </body>
     </html>
   );
+=======
+
+import type { Metadata } from "next"
+import Header from "./components/Header"
+import { Geist, Geist_Mono } from "next/font/google"
+import "./globals.css"
+
+// Geistフォント（サンセリフ）の設定
+const geistSans = Geist({
+  variable: "--font-geist-sans", // CSSカスタムプロパティとして使用
+  subsets: ["latin"], // 読み込む文字セットを指定
+})
+
+// Geistフォント（モノスペース）の設定
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+})
+
+// サイト全体のメタデータ設定（SEO対策）
+export const metadata: Metadata = {
+  title: "My Portfolio",
+  description: "Welcome to my portfolio website",
+}
+
+// アプリケーション全体のレイアウト
+// childrenは各ページのコンテンツを受け取る
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    // 言語設定
+    <html lang="en">
+      <head>
+        {/* レスポンシブデザインのためのビューポート設定 */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
+      {/* フォントの適用 */}
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        {/* 共通ヘッダー */}
+        <Header />
+        {/* 各ページのコンテンツ */}
+        {children}
+      </body>
+    </html>
+  )
+>>>>>>> 4a5fd39 (Initial)
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Image from "next/image";
 
 export default function Home() {
@@ -98,4 +99,11 @@ export default function Home() {
       </footer>
     </div>
   );
+=======
+
+import { HomepageContent } from './pages/HomepageContent';
+
+export default function HomePage() {
+  return <HomepageContent />;
+>>>>>>> 4a5fd39 (Initial)
 }
