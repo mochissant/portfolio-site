@@ -10,6 +10,7 @@ type Props = {
 
 export default function ProjectDetailPage({ params }: Props) {
   const project = projects.find(p => p.slug === params.projectId);
+  console.log("params:", params); // ここで params の型を確認
   if (!project) return <div>プロジェクトが見つかりません</div>;
 
   const ProjectLayout = dynamic(

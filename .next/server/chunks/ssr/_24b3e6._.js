@@ -88,15 +88,15 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 function ProjectDetailPage({ params }) {
     const project = __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$data$2f$projects$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["projects"].find((p)=>p.slug === params.projectId);
+    console.log("params:", params); // ここで params の型を確認
     if (!project) return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         children: "プロジェクトが見つかりません"
     }, void 0, false, {
         fileName: "[project]/app/work/[projectId]/page.tsx",
-        lineNumber: 11,
+        lineNumber: 14,
         columnNumber: 24
     }, this);
-    // 動的にレイアウトファイルを読み込む
-    const CustomLayout = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$shared$2f$lib$2f$app$2d$dynamic$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"])(()=>__turbopack_module_context__({
+    const ProjectLayout = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$shared$2f$lib$2f$app$2d$dynamic$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"])(()=>__turbopack_module_context__({
             "../../components/project-layouts/lightriddlefes": {
                 id: ()=>"[project]/app/components/project-layouts/lightriddlefes.tsx [app-rsc] (ecmascript, async loader)",
                 module: ()=>__turbopack_require__("[project]/app/components/project-layouts/lightriddlefes.tsx [app-rsc] (ecmascript, async loader)")(__turbopack_import__)
@@ -129,21 +129,14 @@ function ProjectDetailPage({ params }) {
                 id: ()=>"[project]/app/components/project-layouts/towerush.tsx [app-rsc] (ecmascript, async loader)",
                 module: ()=>__turbopack_require__("[project]/app/components/project-layouts/towerush.tsx [app-rsc] (ecmascript, async loader)")(__turbopack_import__)
             }
-        }).import(`../../components/project-layouts/${project.slug}`), {
-        loading: ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                children: "Loading..."
-            }, void 0, false, {
-                fileName: "[project]/app/work/[projectId]/page.tsx",
-                lineNumber: 17,
-                columnNumber: 22
-            }, this),
+        }).import(`../../components/project-layouts/${params.projectId}`), {
         ssr: true
     });
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(CustomLayout, {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(ProjectLayout, {
         project: project
     }, void 0, false, {
         fileName: "[project]/app/work/[projectId]/page.tsx",
-        lineNumber: 22,
+        lineNumber: 21,
         columnNumber: 10
     }, this);
 }
