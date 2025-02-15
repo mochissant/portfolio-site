@@ -1,6 +1,6 @@
+
 "use client";
 
-// プロジェクト一覧を表示するコンポーネント
 import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
@@ -32,7 +32,6 @@ export default function ProjectsList() {
       transition={{ duration: 0.3 }}
     >
       <h1>Work</h1>
-      {/* タグフィルター */}
       <div className="tagButtonContainer">
         {allTags.map((tag) => (
           <button
@@ -50,10 +49,9 @@ export default function ProjectsList() {
         ))}
       </div>
 
-      {/* プロジェクトリスト */}
       <div className="projectListContainer">
         {sortedProjects.map((project) => (
-          <Link href={`/work/${project.slug}`} key={project.slug}  className="projectCard">
+          <Link href={`/work/${project.slug}`} key={project.slug} className="projectCard">
             <div className="projectCardContents">
               <div className="projectCardImage">
                 {project.image !== null 
@@ -78,6 +76,6 @@ export default function ProjectsList() {
           </Link>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
