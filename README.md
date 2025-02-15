@@ -1,37 +1,17 @@
-
-# ポートフォリオサイト
-
-このプロジェクトは[Next.js](https://nextjs.org)を使用して作られたポートフォリオサイトです。
-
-## プロジェクト構造
-
-```
 portfolio-site/
-├── app/                      # メインアプリケーションディレクトリ
-│   ├── components/          # 再利用可能なコンポーネント
+├── app/
+│   ├── components/          # コンポーネント
 │   │   ├── project-layouts/ # プロジェクト詳細ページのレイアウト
-│   │   │   ├── CustomLayout.tsx
-│   │   │   ├── StandardLayout.tsx
-│   │   │   └── maitsuki.tsx
-│   │   ├── Header.tsx      # サイトヘッダー
-│   │   └── Modal.tsx       # ナビゲーションモーダル
-│   ├── data/               # データ関連ファイル
-│   │   ├── projectImages.ts # プロジェクト画像の管理
-│   │   └── projects.ts     # プロジェクトデータの定義
-│   ├── pages/              # ページコンポーネント
-│   │   ├── HomepageContent.tsx
-│   │   ├── ProjectDetail.tsx
-│   │   └── ProjectsList.tsx
-│   ├── work/               # 作品ページのルート
-│   │   ├── [projectId]/
-│   │   │   └── page.tsx
-│   │   └── page.tsx
-│   ├── favicon.ico
-│   ├── globals.css         # グローバルスタイル
-│   ├── layout.tsx          # ルートレイアウト
-│   └── page.tsx           # ホームページ
-├── public/                 # 静的ファイル
-│   └── images/            # プロジェクト画像
+│   │   │   ├── StandardLayout.tsx  # 標準レイアウト
+│   │   │   └── maitsuki.tsx       # カスタムレイアウト例
+│   │   ├── Header.tsx      # ヘッダー
+│   │   └── Modal.tsx       # メニューモーダル
+│   ├── data/               # データ
+│   │   ├── projectImages.ts # 画像の設定
+│   │   └── projects.ts     # プロジェクトの情報
+│   └── work/               # 作品ページ
+├── public/                 # 画像ファイル
+│   └── images/            
 │       ├── IMG_3895.jpeg
 │       ├── K2-10th.jpg
 │       ├── TOWERUSH.jpg
@@ -50,12 +30,23 @@ portfolio-site/
     └── tsconfig.json
 ```
 
+## 編集方法
+
+1. プロジェクトの追加
+   - `app/data/projects.ts` に新しいプロジェクトを追加
+   - 画像は `public/images/` に配置
+
+2. レイアウトの編集
+   - 標準レイアウト: `app/components/project-layouts/StandardLayout.tsx`
+   - カスタムレイアウト: `project-layouts/` に新しいファイルを作成
+
+3. スタイルの編集
+   - `app/globals.css` でグローバルスタイルを編集
+   - コンポーネント内で直接スタイルを編集可能
+
 ## 開発の始め方
 
 開発サーバーを起動するには:
 
 ```bash
 npm run dev
-```
-
-ブラウザで [http://0.0.0.0:3000](http://0.0.0.0:3000) を開いてください。
