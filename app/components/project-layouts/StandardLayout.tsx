@@ -12,15 +12,12 @@ export default function StandardLayout({ project }: { project: Project }) {
         <h1>{project.title}</h1>
 
         {project.image && (
-          <div>
-            <div>
-              <Image
-                src={projectImages[project.slug]}
-                alt={project.title}
-                fill
-                className="projectDetailImage"
-              />
-            </div>
+          <div className="projectDetailImage">
+            <Image
+              src={projectImages[project.slug]}
+              alt={project.title}
+              fill
+            />
           </div>
         )} 
 
