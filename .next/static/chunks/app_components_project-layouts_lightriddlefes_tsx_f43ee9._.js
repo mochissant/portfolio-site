@@ -49,7 +49,17 @@ function LightRiddleFesLayout({ project }) {
                                 alt: project.title,
                                 width: 300,
                                 height: 200,
-                                layoutId: `project-image-${project.slug}`
+                                layoutId: `project-image-${project.slug}`,
+                                initial: {
+                                    opacity: 0
+                                },
+                                animate: {
+                                    opacity: 1
+                                },
+                                transition: {
+                                    duration: 0.3,
+                                    ease: "easeInOut"
+                                }
                             }, void 0, false, {
                                 fileName: "[project]/app/components/project-layouts/lightriddlefes.tsx",
                                 lineNumber: 23,
@@ -58,7 +68,7 @@ function LightRiddleFesLayout({ project }) {
                                 className: "projectCardImagePlaceholder"
                             }, void 0, false, {
                                 fileName: "[project]/app/components/project-layouts/lightriddlefes.tsx",
-                                lineNumber: 30,
+                                lineNumber: 33,
                                 columnNumber: 17
                             }, this)
                         }, void 0, false, {
@@ -74,7 +84,7 @@ function LightRiddleFesLayout({ project }) {
                                     children: project.description
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/project-layouts/lightriddlefes.tsx",
-                                    lineNumber: 34,
+                                    lineNumber: 37,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -90,7 +100,7 @@ function LightRiddleFesLayout({ project }) {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/components/project-layouts/lightriddlefes.tsx",
-                                            lineNumber: 37,
+                                            lineNumber: 40,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -100,13 +110,13 @@ function LightRiddleFesLayout({ project }) {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/components/project-layouts/lightriddlefes.tsx",
-                                            lineNumber: 38,
+                                            lineNumber: 41,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/components/project-layouts/lightriddlefes.tsx",
-                                    lineNumber: 36,
+                                    lineNumber: 39,
                                     columnNumber: 13
                                 }, this),
                                 project.url && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -119,18 +129,18 @@ function LightRiddleFesLayout({ project }) {
                                         children: "サイトを見る →"
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/project-layouts/lightriddlefes.tsx",
-                                        lineNumber: 43,
+                                        lineNumber: 46,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/project-layouts/lightriddlefes.tsx",
-                                    lineNumber: 42,
+                                    lineNumber: 45,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/components/project-layouts/lightriddlefes.tsx",
-                            lineNumber: 33,
+                            lineNumber: 36,
                             columnNumber: 11
                         }, this)
                     ]
