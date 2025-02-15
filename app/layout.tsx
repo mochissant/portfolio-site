@@ -1,37 +1,28 @@
-import type { Metadata } from "next"
-import Header from "./components/Header"
-import { Geist, Geist_Mono } from "next/font/google"
-import "./globals.css"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-})
+import type { Metadata } from "next";
+import Header from "./components/Header";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-})
+const geist = Geist({ subsets: ["latin"] });
+const geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "Welcome to my portfolio website",
-}
+  title: "Portfolio",
+  description: "Portfolio website",
+};
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${geist.className} ${geistMono.className}`}>
         <Header />
         {children}
       </body>
     </html>
-  )
+  );
 }

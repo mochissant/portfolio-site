@@ -1,5 +1,6 @@
+
 import { HomepageContent } from './pages/HomepageContent';
 
-export default function HomePage() {
+export default function Home() {
   return <HomepageContent />;
 }
