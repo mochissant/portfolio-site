@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { projects } from '../data/projects';
 import projectImages from '../data/projectImages';
 import { notFound } from 'next/navigation';
-import { StandardLayout } from '../components/project-layouts/StandardLayout';
+import StandardLayout from '../components/project-layouts/StandardLayout';
 import dynamic from 'next/dynamic';
 
 export default function ProjectDetail({ projectId }: { projectId: string }) {
