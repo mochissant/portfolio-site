@@ -1,7 +1,8 @@
-// このファイルはナビゲーションメニューのモーダルコンポーネントを提供します
+
 'use client'
 
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 interface ModalProps {
   isOpen: boolean
@@ -13,23 +14,23 @@ const Modal = ({ isOpen, onClose, children }: ModalProps) => {
   if (!isOpen) return null
 
   return (
-    <div onClick={onClose}>
-      <div onClick={(e) => e.stopPropagation()}>
-        {children}
-        <nav>
-          <div>
-            <Link href="/" onClick={onClose}>
-              ホーム
-            </Link>
-          </div>
-          <div>
-            <Link href="/work" onClick={onClose}>
-              作品一覧
-            </Link>
-          </div>
-        </nav>
-      </div>
-    </div>
+    <motion.div 
+      className="modal-overlay"
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.2 }}
+    >
+      <nav className="modal-nav">
+        <Link href="/" onClick={onClose}>
+          ホーム
+        </Link>
+        <Link href="/work" onClick={onClose}>
+          作品一覧
+        </Link>
+      </nav>
+      {children}
+    </motion.div>
   )
 }
 

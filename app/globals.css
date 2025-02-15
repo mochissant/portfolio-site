@@ -105,16 +105,24 @@ header {
 
 .modal-overlay {
   position: fixed;
-  top: var(--header-height);
+  top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   background-color: var(--main-bg-color);
   display: flex;
   flex-direction: column;
-  gap: var(--margin-md);
   align-items: center;
+  justify-content: center;
   z-index: 1000;
+}
+
+.modal-nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--margin-xl);
+  align-items: center;
+  font-size: var(--fontsize-xl);
 }
 
 .projectListContainer{
