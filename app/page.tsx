@@ -1,5 +1,5 @@
 
-import { HomepageContent } from './pages/HomepageContent';
+import { HomepageContent } from './components/HomepageContent';
 
 export default function Home() {
   return <HomepageContent />;
