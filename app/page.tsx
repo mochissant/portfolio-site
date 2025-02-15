@@ -1,6 +1,6 @@
 
 import { HomepageContent } from './pages/HomepageContent';
 
-export default async function Home() {
+export default function Home() {
   return <HomepageContent />;
 }
