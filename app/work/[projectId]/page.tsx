@@ -1,18 +1,18 @@
 
+'use client'
+
 import { projects } from '../../data/projects';
 import dynamic from 'next/dynamic';
 import { notFound } from 'next/navigation';
+import { useParams } from 'next/navigation';
 
-type Props = {
-  params: {
-    projectId: string
-  }
-}
-
-export default async function ProjectDetailPage({ params }: Props) {
-  const projectId = params.projectId;
+export default function ProjectDetailPage() {
+  const params = useParams();
+  const projectId = params.projectId as string;
+  console.log("params:", params);
+  
   const project = projects.find(p => p.slug === projectId);
-  console.log("params:", params); // ここで params の型を確認
+  
   if (!project) {
     notFound();
   }
@@ -26,10 +26,4 @@ export default async function ProjectDetailPage({ params }: Props) {
   );
 
   return <ProjectLayout project={project} />;
-}
-
-export function generateStaticParams() {
-  return projects.map(project => ({
-    projectId: project.slug,
-  }));
 }
