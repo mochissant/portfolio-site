@@ -336,7 +336,6 @@ function StandardLayout({ project }) {
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: __turbopack_require_stub__ } = __turbopack_context__;
 {
-// このファイルは個々のプロジェクトの詳細ページを表示するためのコンポーネントです
 __turbopack_esm__({
     "default": (()=>ProjectDetail)
 });
@@ -382,12 +381,12 @@ function ProjectDetail({ projectId }) {
                     id: ()=>"[project]/app/components/project-layouts/maitsuki.tsx [app-rsc] (ecmascript, async loader)",
                     module: ()=>__turbopack_require__("[project]/app/components/project-layouts/maitsuki.tsx [app-rsc] (ecmascript, async loader)")(__turbopack_import__)
                 }
-            }).import(`../components/project-layouts/${project.slug}`).then((mod)=>mod.default), {
+            }).import(`../components/project-layouts/${project.slug}`), {
             loading: ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     children: "Loading..."
                 }, void 0, false, {
                     fileName: "[project]/app/pages/ProjectDetail.tsx",
-                    lineNumber: 19,
+                    lineNumber: 18,
                     columnNumber: 24
                 }, this)
         });
@@ -395,7 +394,7 @@ function ProjectDetail({ projectId }) {
             project: project
         }, void 0, false, {
             fileName: "[project]/app/pages/ProjectDetail.tsx",
-            lineNumber: 21,
+            lineNumber: 20,
             columnNumber: 12
         }, this);
     }
@@ -403,7 +402,7 @@ function ProjectDetail({ projectId }) {
         project: project
     }, void 0, false, {
         fileName: "[project]/app/pages/ProjectDetail.tsx",
-        lineNumber: 24,
+        lineNumber: 23,
         columnNumber: 10
     }, this);
 }
@@ -414,20 +413,29 @@ function ProjectDetail({ projectId }) {
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: __turbopack_require_stub__ } = __turbopack_context__;
 {
 __turbopack_esm__({
-    "default": (()=>ProjectDetailPage)
+    "default": (()=>ProjectDetailPage),
+    "generateStaticParams": (()=>generateStaticParams)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$pages$2f$ProjectDetail$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/app/pages/ProjectDetail.tsx [app-rsc] (ecmascript)");
 ;
 ;
-async function ProjectDetailPage({ params }) {
+function ProjectDetailPage({ params }) {
+    console.log("params:", params); // Vercelのログで確認
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$pages$2f$ProjectDetail$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
         projectId: params.projectId
     }, void 0, false, {
         fileName: "[project]/app/work/[projectId]/page.tsx",
-        lineNumber: 9,
+        lineNumber: 10,
         columnNumber: 10
     }, this);
+}
+async function generateStaticParams() {
+    return [
+        {
+            projectId: "example-id"
+        }
+    ]; // 本番ではAPIからデータを取得する
 }
 }}),
 "[project]/app/work/[projectId]/page.tsx [app-rsc] (ecmascript, Next.js server component)": ((__turbopack_context__) => {
