@@ -89,8 +89,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 ;
 ;
-function ProjectDetailPage({ params }) {
-    const project = __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$data$2f$projects$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["projects"].find((p)=>p.slug === params.projectId);
+async function ProjectDetailPage({ params }) {
+    const projectId = params.projectId;
+    const project = __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$data$2f$projects$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["projects"].find((p)=>p.slug === projectId);
     console.log("params:", params); // ここで params の型を確認
     if (!project) {
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["notFound"])();
@@ -128,12 +129,12 @@ function ProjectDetailPage({ params }) {
                 id: ()=>"[project]/app/components/project-layouts/towerush.tsx [app-rsc] (ecmascript, async loader)",
                 module: ()=>__turbopack_require__("[project]/app/components/project-layouts/towerush.tsx [app-rsc] (ecmascript, async loader)")(__turbopack_import__)
             }
-        }).import(`../../components/project-layouts/${params.projectId}`), {
+        }).import(`../../components/project-layouts/${projectId}`), {
         loading: ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 children: "Loading..."
             }, void 0, false, {
                 fileName: "[project]/app/work/[projectId]/page.tsx",
-                lineNumber: 22,
+                lineNumber: 23,
                 columnNumber: 22
             }, this),
         ssr: true
@@ -142,7 +143,7 @@ function ProjectDetailPage({ params }) {
         project: project
     }, void 0, false, {
         fileName: "[project]/app/work/[projectId]/page.tsx",
-        lineNumber: 27,
+        lineNumber: 28,
         columnNumber: 10
     }, this);
 }

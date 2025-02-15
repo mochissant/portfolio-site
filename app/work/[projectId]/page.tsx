@@ -12,7 +12,7 @@ type Props = {
 export default async function ProjectDetailPage({ params }: Props) {
   const projectId = params.projectId;
   const project = projects.find(p => p.slug === projectId);
-  
+  console.log("params:", params); // ここで params の型を確認
   if (!project) {
     notFound();
   }
