@@ -1,0 +1,71 @@
+[15:05:27.661] Running build in Washington, D.C., USA (East) – iad1
+[15:05:27.776] Cloning github.com/mochissant/portfolio-site (Branch: update, Commit: e91aeb4)
+[15:05:28.679] Cloning completed: 908.000ms
+[15:05:29.221] Previous build caches not available
+[15:05:29.423] Running "vercel build"
+[15:05:29.797] Vercel CLI 41.1.3
+[15:05:30.135] Installing dependencies...
+[15:05:42.786] 
+[15:05:42.786] added 385 packages in 12s
+[15:05:42.787] 
+[15:05:42.787] 157 packages are looking for funding
+[15:05:42.787]   run `npm fund` for details
+[15:05:42.846] Detected Next.js version: 15.1.7
+[15:05:42.850] Running "npm run build"
+[15:05:42.962] 
+[15:05:42.962] > nextjs@0.1.0 build
+[15:05:42.962] > next build
+[15:05:42.963] 
+[15:05:43.788] Attention: Next.js now collects completely anonymous telemetry regarding usage.
+[15:05:43.789] This information is used to shape Next.js' roadmap and prioritize features.
+[15:05:43.790] You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+[15:05:43.790] https://nextjs.org/telemetry
+[15:05:43.790] 
+[15:05:43.885]    ▲ Next.js 15.1.7
+[15:05:43.885] 
+[15:05:43.910]    Creating an optimized production build ...
+[15:05:50.570]  ⚠ Compiled with warnings
+[15:05:50.570] 
+[15:05:50.570] ./app/data/projectImages.ts
+[15:05:50.570] Module not found: Can't resolve '../../public/images/towerush.jpg' in '/vercel/path0/app/data'
+[15:05:50.570] 
+[15:05:50.570] Import trace for requested module:
+[15:05:50.571] ./app/data/projectImages.ts
+[15:05:50.571] ./app/components/project-layouts/maitsuki.tsx
+[15:05:50.571] ./app/components/project-layouts/ lazy ^\.\/.*$ namespace object
+[15:05:50.571] ./app/pages/ProjectDetail.tsx
+[15:05:50.571] ./app/work/[projectId]/page.tsx
+[15:05:50.571] 
+[15:05:58.289]  ✓ Compiled successfully
+[15:05:58.296]    Linting and checking validity of types ...
+[15:06:02.094] 
+[15:06:02.095] Failed to compile.
+[15:06:02.095] 
+[15:06:02.095] ./app/components/project-layouts/CustomLayout.tsx
+[15:06:02.095] 18:13  Error: Do not use an `<a>` element to navigate to `/work/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages  @next/next/no-html-link-for-pages
+[15:06:02.095] 
+[15:06:02.095] ./app/components/project-layouts/StandardLayout.tsx
+[15:06:02.095] 4:8  Error: 'projectImages' is defined but never used.  @typescript-eslint/no-unused-vars
+[15:06:02.095] 12:40  Error: A `require()` style import is forbidden.  @typescript-eslint/no-require-imports
+[15:06:02.095] 17:7  Error: Do not use an `<a>` element to navigate to `/work/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages  @next/next/no-html-link-for-pages
+[15:06:02.095] 
+[15:06:02.095] ./app/components/project-layouts/maitsuki.tsx
+[15:06:02.095] 13:9  Error: Do not use an `<a>` element to navigate to `/work/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages  @next/next/no-html-link-for-pages
+[15:06:02.095] 
+[15:06:02.095] ./app/data/projectImages.ts
+[15:06:02.095] 8:18  Error: A `require()` style import is forbidden.  @typescript-eslint/no-require-imports
+[15:06:02.095] 9:19  Error: A `require()` style import is forbidden.  @typescript-eslint/no-require-imports
+[15:06:02.095] 10:19  Error: A `require()` style import is forbidden.  @typescript-eslint/no-require-imports
+[15:06:02.095] 11:25  Error: A `require()` style import is forbidden.  @typescript-eslint/no-require-imports
+[15:06:02.095] 12:10  Error: 'e' is defined but never used.  @typescript-eslint/no-unused-vars
+[15:06:02.095] 
+[15:06:02.095] ./app/pages/HomepageContent.tsx
+[15:06:02.096] 11:9  Error: Do not use an `<a>` element to navigate to `/work/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages  @next/next/no-html-link-for-pages
+[15:06:02.096] 
+[15:06:02.096] ./app/pages/ProjectDetail.tsx
+[15:06:02.096] 3:8  Error: 'Image' is defined but never used.  @typescript-eslint/no-unused-vars
+[15:06:02.096] 5:8  Error: 'projectImages' is defined but never used.  @typescript-eslint/no-unused-vars
+[15:06:02.096] 
+[15:06:02.096] info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
+[15:06:02.129] Error: Command "npm run build" exited with 1
+[15:06:02.390] 
