@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import { projects } from '../data/projects';
 import projectImages from '../data/projectImages';
