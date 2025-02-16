@@ -13,30 +13,12 @@ export default function Header() {
   const toggleModalOpen = () => {
     setIsModalOpen(!isModalOpen)
   }
-
-  // Motion Valueでスケールを管理
-  const scaleX = useMotionValue(0.6);
-
-  // スケールに連動してmochissantのx位置を変換
-  const textX = useTransform(scaleX, [0.6, 1], [-50, 0]);
-  // スケール0.6のとき -50px、スケール1のとき 0pxに移動
   
   return (
     <header>
         <Link href="/" className="moveHeader header-h1">
           <div className="moveHeader">
-            <motion.div
-              className="header-box"
-              style={{ scaleX, transformOrigin: "left" }}
-              animate={{ scaleX: 1 }}
-              transition={{ duration: 0.5, ease: "easeOut" }} // Closing the transition property correctly
-            ></motion.div>
-            {/* mochissantの位置をheader-boxのスケールに連動 */}
-            <motion.h1
-              className="header-h1"
-              style={{ x: textX }} // スケールに応じてx座標が変化
-              transition={{ duration: 0.5, ease: "easeOut" }}
-            >mochissant</motion.h1>
+            <h1 className="header-h1">mochissant</h1>
           </div>
         </Link>
       <button onClick={toggleModalOpen}>{isModalOpen ? "close" : "menu"}</button>
