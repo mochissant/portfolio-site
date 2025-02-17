@@ -7,6 +7,7 @@ import Modal from './Modal';
 import Link from 'next/link'
 import { motion, useTransform, useMotionValue } from "framer-motion";
 import { MochissantLogo } from '../assets/logos';
+import { MenuIcon, CloseIcon } from '../assets/icons';
 
 export default function Header() {
   const [isModalOpen, setIsModalOpen] = useState(false)
