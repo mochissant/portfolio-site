@@ -98,7 +98,7 @@ var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_
 {
 const e = new Error(`Could not parse module '[project]/app/assets/logos/index.ts'
 
-Expected '>', got 'viewBox'`);
+Expected '>', got 'ref'`);
 e.code = 'MODULE_UNPARSEABLE';
 throw e;}}),
 "[project]/app/components/Header.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
