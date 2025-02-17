@@ -158,12 +158,14 @@ header {
 }
 
 .moveHeader {
+  height: var(--header-height);
   display: flex;
-  flex-direction: row;
   align-items: center;
-  width: 100%;
-  flex-grow: 1;
-  gap: var(--margin-md);
+}
+
+.moveHeader svg {
+  height: calc(var(--header-height)  - 16px);
+  width: auto;
 }
 
 .header-h1 {
