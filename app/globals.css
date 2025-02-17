@@ -38,7 +38,7 @@
   --padding-lg: 16px;
   --padding-xl: 24px;
   --padding-xxl: 32px;
-  
+
   --button-height: 44px;
 
   --header-height: 48px;
@@ -107,13 +107,15 @@ header {
   border-bottom: 1px solid var(--main-color);
 }
 
-.moveHeader{
+.moveHeader {
+  height: var(--header-height);
   display: flex;
-  flex-direction: row;
   align-items: center;
-  width: 100%;
-  flex-grow: 1;
-  gap: var(--margin-md);
+}
+
+.moveHeader svg {
+  height: calc(var(--header-height) - 16px);
+  width: auto;
 }
 
 .header-h1 {
