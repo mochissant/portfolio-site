@@ -21,7 +21,9 @@ export default function Header() {
             <h1 className="header-h1">mochissant</h1>
           </div>
         </Link>
-      <button onClick={toggleModalOpen}>{isModalOpen ? "close" : "menu"}</button>
+      <button onClick={toggleModalOpen}>
+  {isModalOpen ? <CloseIcon /> : <MenuIcon />}
+</button>
       <Modal isOpen={isModalOpen} onClose={toggleModalOpen} />
     </header>
   )
