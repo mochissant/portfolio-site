@@ -19,7 +19,6 @@ var _s = __turbopack_refresh__.signature();
 ;
 ;
 ;
-// 単語リスト
 const words = [
     "logo",
     "graphic",
@@ -28,7 +27,6 @@ const words = [
     "UX",
     "event"
 ];
-// 配列をシャッフルする関数
 const shuffleArray = (array)=>{
     return [
         ...array
@@ -47,9 +45,9 @@ function HomepageContent() {
             if (index < shuffledWords.length) {
                 const fadeOutTimeout = setTimeout({
                     "HomepageContent.useEffect.fadeOutTimeout": ()=>{
-                        setIsFadingOut(true); // フェードアウト開始
+                        setIsFadingOut(true);
                     }
-                }["HomepageContent.useEffect.fadeOutTimeout"], 1200); // 1.2秒後にフェードアウト開始
+                }["HomepageContent.useEffect.fadeOutTimeout"], 1200);
                 const changeWordTimeout = setTimeout({
                     "HomepageContent.useEffect.changeWordTimeout": ()=>{
                         setIsFadingOut(false);
@@ -57,7 +55,7 @@ function HomepageContent() {
                             "HomepageContent.useEffect.changeWordTimeout": (prev)=>prev + 1
                         }["HomepageContent.useEffect.changeWordTimeout"]);
                     }
-                }["HomepageContent.useEffect.changeWordTimeout"], 1600); // 1.6秒後に次の単語へ
+                }["HomepageContent.useEffect.changeWordTimeout"], 1600);
                 return ({
                     "HomepageContent.useEffect": ()=>{
                         clearTimeout(fadeOutTimeout);
@@ -74,13 +72,6 @@ function HomepageContent() {
     ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                children: "Welcome"
-            }, void 0, false, {
-                fileName: "[project]/app/components/HomepageContent.tsx",
-                lineNumber: 43,
-                columnNumber: 7
-            }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "topContainer",
                 children: [
@@ -107,17 +98,17 @@ function HomepageContent() {
                                 children: shuffledWords[index]
                             }, shuffledWords[index], false, {
                                 fileName: "[project]/app/components/HomepageContent.tsx",
-                                lineNumber: 48,
+                                lineNumber: 46,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/components/HomepageContent.tsx",
-                            lineNumber: 46,
+                            lineNumber: 44,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/components/HomepageContent.tsx",
-                        lineNumber: 45,
+                        lineNumber: 43,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -126,18 +117,43 @@ function HomepageContent() {
                             children: "design"
                         }, void 0, false, {
                             fileName: "[project]/app/components/HomepageContent.tsx",
-                            lineNumber: 62,
+                            lineNumber: 60,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/components/HomepageContent.tsx",
-                        lineNumber: 61,
+                        lineNumber: 59,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
+                        className: "topNav",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                href: "/work",
+                                children: "Works"
+                            }, void 0, false, {
+                                fileName: "[project]/app/components/HomepageContent.tsx",
+                                lineNumber: 63,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                href: "/#about",
+                                children: "About"
+                            }, void 0, false, {
+                                fileName: "[project]/app/components/HomepageContent.tsx",
+                                lineNumber: 64,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/app/components/HomepageContent.tsx",
+                        lineNumber: 62,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/components/HomepageContent.tsx",
-                lineNumber: 44,
+                lineNumber: 42,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -148,7 +164,7 @@ function HomepageContent() {
                         children: "recentory work"
                     }, void 0, false, {
                         fileName: "[project]/app/components/HomepageContent.tsx",
-                        lineNumber: 66,
+                        lineNumber: 69,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -156,19 +172,43 @@ function HomepageContent() {
                         children: "View Projects"
                     }, void 0, false, {
                         fileName: "[project]/app/components/HomepageContent.tsx",
-                        lineNumber: 67,
+                        lineNumber: 70,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/components/HomepageContent.tsx",
-                lineNumber: 65,
+                lineNumber: 68,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+                id: "about",
+                className: "aboutSection",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                        children: "About"
+                    }, void 0, false, {
+                        fileName: "[project]/app/components/HomepageContent.tsx",
+                        lineNumber: 76,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        children: "自己紹介やプロフィールをここに記載します。"
+                    }, void 0, false, {
+                        fileName: "[project]/app/components/HomepageContent.tsx",
+                        lineNumber: 77,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/app/components/HomepageContent.tsx",
+                lineNumber: 75,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/components/HomepageContent.tsx",
-        lineNumber: 42,
+        lineNumber: 41,
         columnNumber: 5
     }, this);
 }
