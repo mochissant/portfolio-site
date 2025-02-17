@@ -54,7 +54,9 @@ export const MochissantCircleLogo = ({ color = 'currentColor', className, ...pro
       }),
       createElement('path', {
         fill: color,
-        d: "M235.13,25c115.46,0,209,93.54,209,209s-93.54,209-209,209c-86.84,0-161.42-52.87-193.28-128.15"
+        d: "M235.13,25c115.46,0,209,93.54,209,209s-93.54,209-209,209c-86.84,0-161.42-52.87-193.28-128.15",
+        strokeWidth: "4",
+        strokeMiterlimit: "10"
       })
     ]
   });
