@@ -6,7 +6,7 @@ import { useState } from 'react';
 import Modal from './Modal';
 import Link from 'next/link'
 import { motion, useTransform, useMotionValue } from "framer-motion";
-import { MochissantLogo } from '../assets/logos';
+import { MochissantLogo, MochissantCircleLogo, EgMochissantLogo } from '../assets/logos';
 import { MenuIcon, CloseIcon } from '../assets/icons';
 
 export default function Header() {
@@ -21,6 +21,8 @@ export default function Header() {
         <Link href="/" className="moveHeader header-h1">
           <div className="moveHeader">
             <MochissantLogo className="h-6" color="var(--main-color)" />
+            <MochissantCircleLogo className="h-6" color="var(--main-color)" />
+            <EgMochissantLogo className="h-6" color="var(--main-color)" />
           </div>
         </Link>
       <button onClick={toggleModalOpen}>
