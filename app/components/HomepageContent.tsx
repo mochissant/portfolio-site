@@ -7,12 +7,17 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const words = ["logo", "graphic", "editorial", "UI", "UX", "event"];
 
-const shuffleArray = (array: string[]) => {
-  return [...array].sort(() => Math.random() - 0.5);
+const shuffleArray = (array: string[], seed = 1) => {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor((seed * (i + 1)) % (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
 };
 
 export function HomepageContent() {
-  const [shuffledWords, setShuffledWords] = useState(() => shuffleArray(words));
+  const [shuffledWords, setShuffledWords] = useState(() => shuffleArray(words, 1));
   const [index, setIndex] = useState(0);
   const [animationFinished, setAnimationFinished] = useState(false);
   const [isFadingOut, setIsFadingOut] = useState(false);
