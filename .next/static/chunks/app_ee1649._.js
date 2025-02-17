@@ -138,23 +138,35 @@ const MochissantCircleLogo = ({ color = 'currentColor', className, ...props })=>
         viewBox: "0 0 470.13 468",
         className,
         ...props,
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createElement"])('path', {
-            fill: "none",
-            stroke: color,
-            strokeMiterlimit: "10",
-            strokeWidth: "4",
-            d: "M48.29,162.51C77.06,87.36,149.86,34,235.13,34c110.46,0,200,89.54,200,200s-89.54,200-200,200c-82.84,0-153.92-50.37-184.28-122.15"
-        })
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createElement"])('path', {
+                fill: "none",
+                stroke: color,
+                strokeMiterlimit: "10",
+                strokeWidth: "4",
+                d: "M48.29,162.51C77.06,87.36,149.86,34,235.13,34c110.46,0,200,89.54,200,200s-89.54,200-200,200c-82.84,0-153.92-50.37-184.28-122.15"
+            }),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createElement"])('path', {
+                fill: color,
+                d: "M235.13,25c115.46,0,209,93.54,209,209s-93.54,209-209,209c-86.84,0-161.42-52.87-193.28-128.15"
+            })
+        ]
     });
 _c1 = MochissantCircleLogo;
 const EgMochissantLogo = ({ color = 'currentColor', className, ...props })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createElement"])('svg', {
         viewBox: "0 0 350.65 60.16",
         className,
         ...props,
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createElement"])('path', {
-            fill: color,
-            d: "M16,24.72c0-.35.1-.62.3-.82.2-.2.47-.3.82-.3.32,0,.58.1.78.3s.3.47.3.82v1.8c.45-.91,1.12-1.62,2-2.14s1.99-.78,3.32-.78,2.58.33,3.58.98,1.78,1.63,2.34,2.94c.56-1.31,1.37-2.29,2.42-2.94,1.05-.65,2.29-.98,3.7-.98,2.11,0,3.75.71,4.94,2.14s1.78,3.51,1.78,6.26v11.04c0,.35-.1.62-.3.82-.2.2-.47.3-.82.3-.32,0-.58-.1-.78-.3-.2-.2-.3-.47-.3-.82v-11.04c0-2.16-.44-3.75-1.32-4.78-.88-1.03-2.03-1.54-3.44-1.54-1.63,0-2.87.55-3.72,1.64-.85,1.09-1.31,2.53-1.36,4.32v11.4c0,.35-.1.62-.3.82-.2.2-.46.3-.78.3-.35,0-.62-.1-.82-.3-.2-.2-.3-.47-.3-.82v-11.04c0-2.16-.44-3.75-1.32-4.78-.88-1.03-2.03-1.54-3.44-1.54-.83,0-1.55.15-2.18.46-.63.31-1.15.73-1.58,1.26-.43.53-.75,1.17-.96,1.92-.21.75-.33,1.57-.36,2.48v11.24c0,.35-.1.62-.3.82-.2.2-.46.3-.78.3-.35,0-.62-.1-.82-.3-.2-.2-.3-.47-.3-.82v-18.32Z"
-        })
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createElement"])('path', {
+                fill: color,
+                d: "M16,24.72c0-.35.1-.62.3-.82.2-.2.47-.3.82-.3.32,0,.58.1.78.3s.3.47.3.82v1.8c.45-.91,1.12-1.62,2-2.14s1.99-.78,3.32-.78,2.58.33,3.58.98,1.78,1.63,2.34,2.94c.56-1.31,1.37-2.29,2.42-2.94,1.05-.65,2.29-.98,3.7-.98,2.11,0,3.75.71,4.94,2.14s1.78,3.51,1.78,6.26v11.04c0,.35-.1.62-.3.82-.2.2-.47.3-.82.3-.32,0-.58-.1-.78-.3-.2-.2-.3-.47-.3-.82v-11.04c0-2.16-.44-3.75-1.32-4.78-.88-1.03-2.03-1.54-3.44-1.54-1.63,0-2.87.55-3.72,1.64-.85,1.09-1.31,2.53-1.36,4.32v11.4c0,.35-.1.62-.3.82-.2.2-.46.3-.78.3-.35,0-.62-.1-.82-.3-.2-.2-.3-.47-.3-.82v-11.04c0-2.16-.44-3.75-1.32-4.78-.88-1.03-2.03-1.54-3.44-1.54-.83,0-1.55.15-2.18.46-.63.31-1.15.73-1.58,1.26-.43.53-.75,1.17-.96,1.92-.21.75-.33,1.57-.36,2.48v11.24c0,.35-.1.62-.3.82-.2.2-.46.3-.78.3-.35,0-.62-.1-.82-.3-.2-.2-.3-.47-.3-.82v-18.32Z"
+            }),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createElement"])('path', {
+                fill: color,
+                d: "M85.32,24.72c0-.35.1-.62.3-.82.2-.2.47-.3.82-.3.32,0,.58.1.78.3s.3.47.3.82v18.32c0,.35-.1.62-.3.82-.2.2-.46.3-.78.3-.35,0-.62-.1-.82-.3-.2-.2-.3-.47-.3-.82V24.72Z"
+            })
+        ]
     });
 _c2 = EgMochissantLogo;
 var _c, _c1, _c2;
