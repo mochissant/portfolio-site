@@ -6,7 +6,7 @@ import { useState } from 'react';
 import Modal from './Modal';
 import Link from 'next/link'
 import { motion, useTransform, useMotionValue } from "framer-motion";
-import { MochissantLogo } from '@/app/assets/logos';
+import { MochissantLogo } from '../assets/logos';
 
 export default function Header() {
   const [isModalOpen, setIsModalOpen] = useState(false)
