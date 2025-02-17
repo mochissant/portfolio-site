@@ -263,7 +263,8 @@ header {
 
 .projectDetailImage {
   width: 100vw;
-  left: calc(var(--margin-md) * -.5);
+  margin-left: calc(var(--margin-md) * -.5);
+  margin-right: calc(var(--margin-md) * -.5);
   height: 56.25%;
   overflow: hidden;
   position: relative;
