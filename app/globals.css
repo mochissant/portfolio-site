@@ -349,6 +349,25 @@ header {
   padding-right: var(--padding-md);
 }
 
+.topNav {
+  display: flex;
+  gap: var(--margin-md);
+  margin-top: var(--margin-md);
+}
+
+.topNav a {
+  color: var(--main-color);
+  text-decoration: none;
+  font-family: var(--eg-font);
+}
+
+.aboutSection {
+  width: 100%;
+  padding: var(--padding-xl);
+  border-top: 1px solid var(--main-color);
+  margin-top: var(--margin-xl);
+}
+
 .workContainer h2{
   position: relative;
   top: calc( var(--fontsize-xl) * -0.7);

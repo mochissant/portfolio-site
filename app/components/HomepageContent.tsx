@@ -1,13 +1,12 @@
+
 "use client";
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-// 単語リスト
 const words = ["logo", "graphic", "editorial", "UI", "UX", "event"];
 
-// 配列をシャッフルする関数
 const shuffleArray = (array: string[]) => {
   return [...array].sort(() => Math.random() - 0.5);
 };
@@ -21,13 +20,13 @@ export function HomepageContent() {
   useEffect(() => {
     if (index < shuffledWords.length) {
       const fadeOutTimeout = setTimeout(() => {
-        setIsFadingOut(true); // フェードアウト開始
-      }, 1200); // 1.2秒後にフェードアウト開始
+        setIsFadingOut(true);
+      }, 1200);
 
       const changeWordTimeout = setTimeout(() => {
         setIsFadingOut(false);
         setIndex((prev) => prev + 1);
-      }, 1600); // 1.6秒後に次の単語へ
+      }, 1600);
 
       return () => {
         clearTimeout(fadeOutTimeout);
@@ -40,7 +39,6 @@ export function HomepageContent() {
 
   return (
     <div>
-      <h1>Welcome</h1>
       <div className="topContainer">
         <div className="animatedBoxContainer">
           <AnimatePresence mode="wait">
@@ -50,7 +48,7 @@ export function HomepageContent() {
                 initial={{ opacity: 0, y: 4 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 0.4 }} // exitアニメーションの時間を短縮
+                transition={{ duration: 0.4 }}
                 className="animatedWord"
               >
                 {shuffledWords[index]}
@@ -61,13 +59,23 @@ export function HomepageContent() {
         <div>
           <p className="animatedWord">design</p>
         </div>
+        <nav className="topNav">
+          <Link href="/work">Works</Link>
+          <Link href="/#about">About</Link>
+        </nav>
       </div>
+      
       <div className="workContainer">
         <h2 className="h2-eg">recentory work</h2>
         <Link href="/work">
           View Projects
         </Link>
       </div>
+
+      <section id="about" className="aboutSection">
+        <h2>About</h2>
+        <p>自己紹介やプロフィールをここに記載します。</p>
+      </section>
     </div>
   );
 }

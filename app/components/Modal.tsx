@@ -27,6 +27,9 @@ const Modal = ({ isOpen, onClose, children }: ModalProps) => {
         <Link href="/work" onClick={onClose} className="modal-item">
           作品一覧
         </Link>
+        <Link href="/#about" onClick={onClose} className="modal-item">
+          About
+        </Link>
       </nav>
       {children}
     </motion.div>
