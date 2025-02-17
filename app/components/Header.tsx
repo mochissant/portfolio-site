@@ -6,6 +6,7 @@ import { useState } from 'react';
 import Modal from './Modal';
 import Link from 'next/link'
 import { motion, useTransform, useMotionValue } from "framer-motion";
+import { MochissantLogo } from '@/app/assets/logos';
 
 export default function Header() {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -18,7 +19,7 @@ export default function Header() {
     <header>
         <Link href="/" className="moveHeader header-h1">
           <div className="moveHeader">
-            <h1 className="header-h1">mochissant</h1>
+            <MochissantLogo className="h-6" color="var(--main-color)" />
           </div>
         </Link>
       <button onClick={toggleModalOpen}>
