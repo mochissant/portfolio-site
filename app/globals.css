@@ -116,6 +116,12 @@ header {
 .moveHeader svg {
   height: calc(var(--header-height) - 16px);
   width: auto;
+  display: block;
+}
+
+.moveHeader svg path {
+  fill: currentColor;
+  stroke: currentColor;
 }
 
 .header-h1 {
