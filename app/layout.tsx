@@ -25,6 +25,9 @@ export default function RootLayout({
 }) {
   const pathname = usePathname()
   const isHomePage = pathname === '/'
+  
+  console.log('Current pathname:', pathname);
+  console.log('Is homepage:', isHomePage);
 
   return (
     <html lang="en">

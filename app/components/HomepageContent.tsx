@@ -18,6 +18,9 @@ export function HomepageContent() {
   const [isFadingOut, setIsFadingOut] = useState(false);
 
   useEffect(() => {
+    console.log('Current index:', index);
+    console.log('Current word:', shuffledWords[index]);
+    
     if (index < shuffledWords.length) {
       const fadeOutTimeout = setTimeout(() => {
         setIsFadingOut(true);
