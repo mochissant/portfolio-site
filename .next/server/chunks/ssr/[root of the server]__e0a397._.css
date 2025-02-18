@@ -163,6 +163,12 @@ header {
   align-items: center;
 }
 
+.moveHeader {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
 .moveHeader svg {
   height: calc(var(--header-height)  - 16px);
   width: auto;
@@ -171,6 +177,7 @@ header {
 
 .moveHeader svg path {
   fill: currentColor;
+  stroke-width: inherit;
   stroke: currentColor;
 }
 
