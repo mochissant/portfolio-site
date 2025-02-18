@@ -1,0 +1,78 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--main-bg-color);
+}
+
+:root {
+  --main-font: "Noto Sans JP", sans-serif;
+  --eg-font: "Lato", sans-serif;
+
+  /*色系*/
+  --gray50: #f6f7f8;
+  --gray100: #e8e8e8;
+  --purple: #be84b8;
+  --black: #212121;
+  --white: #ffffff;
+
+  --main-color: var(--black);
+  --main-bg-color: var(--gray50);
+
+  /*サイズ系変数*/
+  --margin-sm: 8px;
+  --margin-md: 16px;
+  --margin-lg: 24px;
+  --margin-xl: 32px;
+  --margin-xxl: 64px;
+
+  --padding-sm: 4px;
+  --padding-md: 8px;
+  --padding-lg: 16px;
+  --padding-xl: 24px;
+  --padding-xxl: 32px;
+
+  --button-height: 44px;
+  --header-height: 48px;
+
+  --fontsize-sm: 12px;
+  --fontsize-md: 16px;
+  --fontsize-lg: 20px;
+  --fontsize-xl: 24px;
+
+  --borderradius-sm: 4px;
+  --borderradius-md: 8px;
+  --borderradius-lg: 12px;
+  --borderradius-all: 999px;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--gray50);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  z-index: 0;
+  font-family: var(--main-font);
+}
+
+a {
+  all: unset;
+  display: inline;
+}
+
+h1 {
+  font-family: var(--main-font);
+  color: var(--main-color);
+}
+
+button {
+  min-height: 44px;
+  min-width: 44px;
+  border: none;
+  font-family: var(--eg-font);
+  font-weight: 700;
+}
