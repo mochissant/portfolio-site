@@ -1,42 +1,37 @@
 @import "./base.css";
 
-h2Eg {
-  font-family: var(--eg-font);
+.h2Eg {
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: var(--fontsize-xl);
-  line-height: var(--fontsize-xxl);
+  font-size: 32px;
+  line-height: 39px;
+  color: var(--main-color);
 }
 
 .topContainer {
-  width: 100%;
-  height: 400px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  gap: var(--margin-sm);
-  padding: var(--padding-xxl);
-  border-bottom: 1px solid var(--main-color);
+  gap: var(--margin-lg);
+  margin-top: var(--margin-xxl);
+  align-items: flex-end;
+  margin-bottom: var(--margin-xxl);
 }
 
 .animatedBoxContainer {
-  width: 100%;
-  height: var(--fontsize-lg);
-  border: 1px solid var(--main-color);
+  width: 96px;
+  height: 32px;
+  position: relative;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 
 .animatedWord {
-  font-family: var(--eg-font);
-  font-weight: 400;
-  font-size: var(--fontsize-md);
-  font-color: var(--main-color);
-  text-decoration: none;
-  background-color: transparent;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: var(--fontsize-xl);
 }
 
 .topNav {
@@ -55,7 +50,8 @@ h2Eg {
   width: 100%;
   padding: var(--padding-xl);
   border-top: 1px solid var(--main-color);
-  margin-top: var(--margin-xl);
+  margin-top: var(--margin-xxl);
+  margin-bottom: var(--margin-xxl);
 }
 
 .workContainer{
@@ -67,4 +63,5 @@ h2Eg {
   padding: 64px 0px;
   gap: 32px;
   border-top: 1px solid #212121;
+  margin-bottom: var(--margin-xxl);
 }
