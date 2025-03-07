@@ -1,14 +1,11 @@
-"use client";
+'use client';
 
-import Link from 'next/link';
-import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { words } from '../data/words';
 import { projects } from '../data/projects';
 import projectImages from '../data/projectImages';
-
-// トップページのアニメーションに使用する単語リスト
-const words = ["logo", "graphic", "editorial", "UI", "UX", "event"];
+import '../styles/home.css';
 
 /**
  * 配列をシャッフルする関数
@@ -31,166 +28,65 @@ export function HomepageContent() {
   const [wordIndex, setWordIndex] = useState(0);
   const [animationFinished, setAnimationFinished] = useState(false);
   const [isFadingOut, setIsFadingOut] = useState(false);
-  
+
   // プロジェクトデータを年月の降順でソート（最新順）
   const sortedProjects = [...projects].sort((a, b) => {
     if (a.year !== b.year) return b.year - a.year; // 年で降順
     if (a.month !== b.month) return b.month - a.month; // 月で降順
     return a.slug.localeCompare(b.slug); // 同じ年月ならスラッグでソート
   });
-  
+
   // 最新の5件のプロジェクトのみを表示用に取得
   const latestProjects = sortedProjects.slice(0, 5);
   const [projectIndex, setProjectIndex] = useState(0); // 現在表示中のプロジェクトインデックス
-
-  /**
-   * 単語アニメーションのタイミング制御
-   * 単語を表示し、一定時間後にフェードアウトさせ、次の単語に切り替える
-   */
-  useEffect(() => {
-    console.log('Current word index:', wordIndex);
-    console.log('Current word:', shuffledWords[wordIndex]);
-
-    if (wordIndex < shuffledWords.length) {
-      // 1.2秒後に単語をフェードアウトさせる
-      const fadeOutTimeout = setTimeout(() => {
-        setIsFadingOut(true);
-      }, 1200);
-
-      // 1.6秒後に次の単語に切り替える
-      const changeWordTimeout = setTimeout(() => {
-        setIsFadingOut(false);
-        setWordIndex((prev) => prev + 1);
-      }, 1600);
-
-      // コンポーネントのアンマウント時にタイマーをクリア
-      return () => {
-        clearTimeout(fadeOutTimeout);
-        clearTimeout(changeWordTimeout);
-      };
-    } else {
-      // すべての単語が表示し終わったらアニメーション完了
-      setAnimationFinished(true);
-    }
-  }, [wordIndex, shuffledWords]);
-  
-  /**
-   * プロジェクトスライダーの移動制御関数
-   */
-  // 前のプロジェクトに移動（循環する）
-  const goToPrevProject = () => {
-    setProjectIndex((prev) => (prev > 0 ? prev - 1 : latestProjects.length - 1));
-  };
-  
-  // 次のプロジェクトに移動（循環する）
-  const goToNextProject = () => {
-    setProjectIndex((prev) => (prev < latestProjects.length - 1 ? prev + 1 : 0));
-  };
 
   return (
     <div>
       <div className="topContainer">
         <div className="animatedBoxContainer">
           <AnimatePresence mode="wait">
-            {!animationFinished && wordIndex < shuffledWords.length && (
+            {!animationFinished && (
               <motion.div
-                key={shuffledWords[wordIndex]}
-                initial={{ opacity: 0, y: 4 }}
-                animate={{ opacity: 1, y: 0 }}
+                key={wordIndex}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 0.4 }}
-                className="animatedWord"
+                transition={{ duration: 0.5 }}
+                className="animatedBox"
               >
                 {shuffledWords[wordIndex]}
               </motion.div>
             )}
           </AnimatePresence>
         </div>
-        <div>
-          <p className="animatedWord">design</p>
-        </div>
       </div>
 
-      <div className="workContainer">
-        <h2 className="h2Eg">WORK</h2>
-        <div className="workSliderContainer">
-          <div className="workSliderNav left">
-            <button className="workSliderArrowButton" onClick={goToPrevProject}>
-              <Image 
-                src="/assets/icons/left.svg" 
-                alt="left arrow"
-                width={24}
-                height={24}
-              />
-            </button>
-          </div>
-          <div className="workCard">
-            {/* プロジェクトカードの表示 - AnimatePresenceでアニメーション付き切り替え */}
-            <AnimatePresence mode="wait">
-              {latestProjects.length > 0 && (
-                <motion.div
-                  key={latestProjects[projectIndex].slug} // keyを指定してReactが変更を検知できるようにする
-                  initial={{ opacity: 0 }} // 初期状態は透明
-                  animate={{ opacity: 1 }} // 表示状態
-                  exit={{ opacity: 0 }} // 消える際のアニメーション
-                  transition={{ duration: 0.3 }} // アニメーション時間
-                  className="projectCardContents"
-                >
-                  {/* プロジェクト画像エリア */}
-                  <div className="projectCardImage">
-                    {latestProjects[projectIndex].image ? (
-                      // 画像がある場合はNext.jsのImageコンポーネントで表示
-                      <Image
-                        src={projectImages[latestProjects[projectIndex].slug]}
-                        alt={latestProjects[projectIndex].title}
-                        layout="fill"
-                        objectFit="cover"
-                        sizes="100%"
-                      />
-                    ) : (
-                      // 画像がない場合はプレースホルダーを表示（1:1のアスペクト比を維持）
-                      <div className="projectCardImagePlaceholder"></div>
-                    )}
-                  </div>
-                  {/* プロジェクト情報エリア */}
-                  <div className="projectCardTitleArea">
-                    <h3 className="projectCardTitle">{latestProjects[projectIndex].title}</h3>
-                    {/* タグエリア - 各タグを#付きで表示 */}
-                    <div className="projectCardTagArea">
-                      {latestProjects[projectIndex].tag.map((tag) => (
-                        <span key={tag} className="projectCardTag">#{tag}</span>
-                      ))}
-                    </div>
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-          <div className="workSliderNav right">
-            <button className="workSliderArrowButton" onClick={goToNextProject}>
-              <Image 
-                src="/assets/icons/right.svg" 
-                alt="right arrow"
-                width={24}
-                height={24}
-              />
-            </button>
-          </div>
+      <div className="mainContent">
+        <h2>最新のプロジェクト</h2>
+        <div className="latestProjectsContainer">
+          {latestProjects.map((project, index) => (
+            <div key={project.slug} className="projectCard">
+              <div className="projectCardImage">
+                {project.image !== null ? (
+                  <img
+                    src={projectImages[project.slug]}
+                    alt={project.title}
+                    width={150}
+                    height={100}
+                  />
+                ) : (
+                  <div className="projectCardImagePlaceholder"></div>
+                )}
+              </div>
+              <div className="projectCardInfo">
+                <h3>{project.title}</h3>
+                <p className="projectCardDate">{project.year}年{project.month}月</p>
+                <p className="projectCardDescription">{project.description.substring(0, 100)}...</p>
+              </div>
+            </div>
+          ))}
         </div>
-        <Link href="/work" className="viewProjectsLink">
-          View Projects
-        </Link>
       </div>
-
-      <section id="about" className="aboutContainer">
-        <h2 className="h2Eg">About</h2>
-        <div className="aboutContainerInner">
-          <div className="aboutImage">
-            <Image src="/assets/images/profile.jpg" alt="profile" width={200} height={200} />
-          </div>
-          <p>1999年生まれ、東京都在住。大学時代に謎解き制作サークルに所属し、印刷物デザインを担当。就職後もデザイナーとして働く傍ら、謎解きイベントの企画・運営・デザインに携わる。</p>
-        </div>
-      </section>
     </div>
   );
 }
