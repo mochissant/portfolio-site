@@ -74,11 +74,11 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0px;
+  padding: 8px; /* 影の表示に必要な余白を追加 */
   width: 100%;
   max-width: 900px;
   box-sizing: border-box; /* paddingを含めた幅計算に */
-  overflow-x: hidden; /* 横方向のはみ出しを防止 */
+  overflow: visible; /* 影が見えるようにオーバーフロー設定を変更 */
 }
 
 /* ワークスライダーのナビゲーション部分のスタイル */
@@ -98,6 +98,9 @@
 .workCard {
   order: 2;
   flex-grow: 1;
+  margin: 4px; /* 影が見えるように余白を追加 */
+  position: relative; /* 影の表示に必要な位置指定 */
+  z-index: 1; /* 重なり順を調整 */
 }
 
 /* 右ナビゲーションの位置指定 - flexboxの順序を3に */
