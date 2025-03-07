@@ -143,7 +143,7 @@ export function HomepageContent() {
                       <Image
                         src={projectImages[latestProjects[projectIndex].slug]}
                         alt={latestProjects[projectIndex].title}
-                        width={300}
+                        width={200}
                         height={200}
                         style={{ objectFit: 'cover' }} // 画像のサイズ調整
                       />
@@ -155,8 +155,6 @@ export function HomepageContent() {
                   {/* プロジェクト情報エリア */}
                   <div className="projectCardTitleArea">
                     <h3 className="projectCardTitle">{latestProjects[projectIndex].title}</h3>
-                    {/* 説明文からHTMLタグを除去して表示 */}
-                    <p className="projectCardDescription">{latestProjects[projectIndex].description.split('</')[0]}</p>
                     {/* タグエリア - 各タグを#付きで表示 */}
                     <div className="projectCardTagArea">
                       {latestProjects[projectIndex].tag.map((tag) => (

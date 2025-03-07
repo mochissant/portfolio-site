@@ -487,7 +487,7 @@ function HomepageContent() {
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                     src: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$data$2f$projectImages$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"][latestProjects[projectIndex].slug],
                                                     alt: latestProjects[projectIndex].title,
-                                                    width: 300,
+                                                    width: 200,
                                                     height: 200,
                                                     style: {
                                                         objectFit: 'cover'
@@ -520,14 +520,6 @@ function HomepageContent() {
                                                         lineNumber: 157,
                                                         columnNumber: 21
                                                     }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                        className: "projectCardDescription",
-                                                        children: latestProjects[projectIndex].description.split('</')[0]
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/components/HomepageContent.tsx",
-                                                        lineNumber: 159,
-                                                        columnNumber: 21
-                                                    }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "projectCardTagArea",
                                                         children: latestProjects[projectIndex].tag.map((tag)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -538,12 +530,12 @@ function HomepageContent() {
                                                                 ]
                                                             }, tag, true, {
                                                                 fileName: "[project]/app/components/HomepageContent.tsx",
-                                                                lineNumber: 163,
+                                                                lineNumber: 161,
                                                                 columnNumber: 25
                                                             }, this))
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/HomepageContent.tsx",
-                                                        lineNumber: 161,
+                                                        lineNumber: 159,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
@@ -580,17 +572,17 @@ function HomepageContent() {
                                         height: 24
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/HomepageContent.tsx",
-                                        lineNumber: 173,
+                                        lineNumber: 171,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/HomepageContent.tsx",
-                                    lineNumber: 172,
+                                    lineNumber: 170,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/components/HomepageContent.tsx",
-                                lineNumber: 171,
+                                lineNumber: 169,
                                 columnNumber: 11
                             }, this)
                         ]
@@ -605,7 +597,7 @@ function HomepageContent() {
                         children: "View Projects"
                     }, void 0, false, {
                         fileName: "[project]/app/components/HomepageContent.tsx",
-                        lineNumber: 182,
+                        lineNumber: 180,
                         columnNumber: 9
                     }, this)
                 ]
@@ -622,20 +614,20 @@ function HomepageContent() {
                         children: "About"
                     }, void 0, false, {
                         fileName: "[project]/app/components/HomepageContent.tsx",
-                        lineNumber: 188,
+                        lineNumber: 186,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         children: "自己紹介やプロフィールをここに記載します。"
                     }, void 0, false, {
                         fileName: "[project]/app/components/HomepageContent.tsx",
-                        lineNumber: 189,
+                        lineNumber: 187,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/components/HomepageContent.tsx",
-                lineNumber: 187,
+                lineNumber: 185,
                 columnNumber: 7
             }, this)
         ]
