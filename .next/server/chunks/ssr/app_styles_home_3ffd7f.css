@@ -1,4 +1,12 @@
 /* [project]/app/styles/home.css [app-client] (css, ) */
+h2Eg {
+  font-family: var(--eg-font);
+  font-style: normal;
+  font-weight: 600;
+  font-size: var(--fontsize-xl);
+  line-height: var(--fontsize-xxl);
+}
+
 .topContainer {
   width: 100%;
   height: 400px;
@@ -47,6 +55,17 @@
   padding: var(--padding-xl);
   border-top: 1px solid var(--main-color);
   margin-top: var(--margin-xl);
+}
+
+.workContainer {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 64px 0;
+  gap: 32px;
+  border-top: 1px solid #212121;
 }
 
 /*# sourceMappingURL=app_styles_home_3ffd7f.css.map*/

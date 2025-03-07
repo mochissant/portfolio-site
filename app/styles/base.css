@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap');
 
 * {
   margin: 0;
@@ -9,7 +9,8 @@
 
 :root {
   --main-font: "Noto Sans JP", sans-serif;
-  --eg-font: "Lato", sans-serif;
+  --eg-font: "Montserrat", sans-serif;
+  font-family: var(--main-font);
 
   /*色系*/
   --gray50: #f6f7f8;
@@ -19,8 +20,6 @@
   --black: #212121;
   --white: #ffffff;
   --background-color: var(--white);
-  --main-color: var(--black);
-
   --main-color: var(--black);
   --main-bg-color: var(--white);
 
@@ -38,12 +37,13 @@
   --padding-xxl: 32px;
 
   --button-height: 44px;
-  --header-height: 48px;
+  --header-height: 52px;
 
   --fontsize-sm: 12px;
   --fontsize-md: 16px;
   --fontsize-lg: 20px;
   --fontsize-xl: 24px;
+  --fontsize-xxl: 32px;
 
   --borderradius-sm: 4px;
   --borderradius-md: 8px;

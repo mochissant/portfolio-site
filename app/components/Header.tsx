@@ -42,11 +42,12 @@ function HamburgerIcon({ isOpen }: { isOpen: boolean }) {
       <motion.path
         fillRule="evenodd"
         clipRule="evenodd"
+        initial={false}
         animate={{ d: isOpen 
           ? "M20.2007 15.783L3.28626 9.6266L3.79929 8.21706L20.7138 14.3734L20.2007 15.783Z" 
           : "M21 9.75H3V8.25H21V9.75Z" 
         }}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
+        transition={{ duration: 0.3, ease: [0.25, 1, 0.5, 1] }}
         fill="#212121"
         className="top"
       />
@@ -55,11 +56,12 @@ function HamburgerIcon({ isOpen }: { isOpen: boolean }) {
       <motion.path
         fillRule="evenodd"
         clipRule="evenodd"
+        initial={false}
         animate={{ d: isOpen 
           ? "M20.7138 9.62659L3.79929 15.7829L3.28625 14.3734L20.2007 8.21705L20.7138 9.62659Z"
           : "M21 15.75H3V14.25H21V15.75Z"
         }}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
+        transition={{ duration: 0.3, ease: [0.25, 1, 0.5, 1] }}
         fill="#212121"
         className="bottom"
       />

@@ -67,14 +67,10 @@ export function HomepageContent() {
         <div>
           <p className="animatedWord">design</p>
         </div>
-        <nav className="topNav">
-          <Link href="/work">Works</Link>
-          <Link href="/#about">About</Link>
-        </nav>
       </div>
       
       <div className="workContainer">
-        <h2 className="h2-eg">recentory work</h2>
+        <h2 className="h2Eg">WORK</h2>
         <Link href="/work">
           View Projects
         </Link>
