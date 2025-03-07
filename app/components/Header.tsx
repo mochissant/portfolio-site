@@ -1,12 +1,10 @@
-// このファイルはサイト全体のヘッダーコンポーネントを提供します
+
 "use client";
 
 import { useState } from "react";
-import Modal from "./Modal";
 import Link from "next/link";
-import { motion, useTransform, useMotionValue } from "framer-motion";
-import { MochissantLogo,} from "../assets/logos";
-import { HamburgerIcon } from "../assets/icons/index";
+import { motion } from "framer-motion";
+import { MochissantLogo } from "../assets/logos";
 
 export default function Header() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -23,9 +21,52 @@ export default function Header() {
         </div>
       </Link>
       <button onClick={toggleModalOpen}>
-        {isModalOpen ? <CloseIcon /> : <MenuIcon />}
+        <HamburgerIcon isOpen={isModalOpen} />
       </button>
-      <Modal isOpen={isModalOpen} onClose={toggleModalOpen} />
+      {isModalOpen && (
+        <nav className="mobileNav">
+          <Link href="/work">Works</Link>
+          <Link href="/#about">About</Link>
+        </nav>
+      )}
     </header>
+  );
+}
+
+function HamburgerIcon({ isOpen }: { isOpen: boolean }) {
+  return (
+    <motion.svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {/* 上の線 */}
+      <motion.path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        animate={{ d: isOpen 
+          ? "M20.2007 15.783L3.28626 9.6266L3.79929 8.21706L20.7138 14.3734L20.2007 15.783Z" 
+          : "M21 9.75H3V8.25H21V9.75Z" 
+        }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+        fill="#212121"
+        className="top"
+      />
+
+      {/* 下の線 */}
+      <motion.path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        animate={{ d: isOpen 
+          ? "M20.7138 9.62659L3.79929 15.7829L3.28625 14.3734L20.2007 8.21705L20.7138 9.62659Z"
+          : "M21 15.75H3V14.25H21V15.75Z"
+        }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+        fill="#212121"
+        className="bottom"
+      />
+    </motion.svg>
   );
 }
