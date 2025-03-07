@@ -331,7 +331,7 @@ header {
   flex: none;
   order: 1;
   flex-grow: 1;
-  width: 100%;
+  z-index: 100;
   min-height: 300px;
 }
 
@@ -345,9 +345,15 @@ header {
 
 .projectCardImage {
   width: 100%;
-  height: 200px;
+  aspect-ratio: 1;
+  object-fit: cover;
   overflow: hidden;
-  border-radius: var(--borderradius-sm);
+}
+
+.projectCardImage img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
 }
 
 .projectCardImagePlaceholder {
