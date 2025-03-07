@@ -71,6 +71,13 @@ export function HomepageContent() {
       
       <div className="workContainer">
         <h2 className="h2Eg">WORK</h2>
+        <div className="workSliderContainer">
+          <div className="workSliderArrow">
+            <button className="workSliderArrowButton" onClick={() => setIndex((prev) => prev - 1)}>
+              <img src="app/assets/icons/left.svg" alt="left arrow"/>
+            </button>
+          </div>
+        </div>
         <Link href="/work">
           View Projects
         </Link>
