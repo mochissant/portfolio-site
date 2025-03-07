@@ -76,6 +76,7 @@
   max-width: 900px;
 }
 
+/* ワークスライダーのナビゲーション部分のスタイル */
 .workSliderNav{
   display: flex;
   flex-direction: row;
@@ -84,31 +85,37 @@
   gap: var(--margin-sm);
 }
 
+/* 左ナビゲーションの位置指定 - flexboxの順序を1に */
 .workSliderNav.left {
   order: 1;
 }
 
+/* カード本体の位置指定 - flexboxの順序を2に、伸縮可能に */
 .workCard {
   order: 2;
   flex-grow: 1;
 }
 
+/* 右ナビゲーションの位置指定 - flexboxの順序を3に */
 .workSliderNav.right {
   order: 3;
 }
 
+/* スライダーの矢印ボタンのスタイル */
 .workSliderArrowButton {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+  cursor: pointer; /* マウスオーバー時にポインタに */
 }
 
+/* 矢印ボタン内の画像サイズ */
 .workSliderArrowButton Image {
   width: 24px;
   height: 24px;
 }
 
+/* ワークカードのデザイン - プロジェクト表示用 */
 .workCard{
   box-sizing: border-box;
   display: flex;
@@ -118,15 +125,16 @@
   gap: var(--margin-sm);
   background: var(--bg-color);
   border: 1px solid var(--main-color);
-  box-shadow: 4px 4px 0px var(--main-color);
+  box-shadow: 4px 4px 0px var(--main-color); /* 影で立体感を出す */
   border-radius: var(--borderradius-md);
   flex: none;
   order: 1;
   flex-grow: 1;
   width: 100%;
-  min-height: 300px;
+  min-height: 300px; /* 最小高さを確保 */
 }
 
+/* プロジェクトカードの内部コンテンツ配置 */
 .projectCardContents {
   width: 100%;
   display: flex;
@@ -135,20 +143,23 @@
   background-color: transparent;
 }
 
+/* プロジェクト画像エリアのスタイル */
 .projectCardImage {
   width: 100%;
   height: 200px;
-  overflow: hidden;
+  overflow: hidden; /* はみ出した画像を隠す */
   border-radius: var(--borderradius-sm);
 }
 
+/* 画像がない場合のプレースホルダー */
 .projectCardImagePlaceholder {
   width: 100%;
   height: 200px;
-  background-color: var(--gray100);
+  background-color: var(--gray100); /* グレーの背景 */
   border-radius: var(--borderradius-sm);
 }
 
+/* プロジェクトタイトルエリアのスタイル */
 .projectCardTitleArea {
   display: flex;
   flex-direction: column;
