@@ -1,0 +1,250 @@
+/* [project]/app/styles/home.css [app-client] (css) */
+.h2Eg {
+  font-family: var(--eg-font);
+  font-style: normal;
+  font-weight: 600;
+  font-size: var(--fontsize-lg);
+  line-height: var(--fontsize-xl);
+  color: var(--main-color);
+  background-color: #0000;
+}
+
+.topContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: var(--margin-lg);
+  margin-top: var(--margin-xxl);
+  align-items: flex-end;
+  margin-bottom: var(--margin-xxl);
+}
+
+.animatedBoxContainer {
+  width: 96px;
+  height: 32px;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.animatedWord {
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  font-size: var(--fontsize-xl);
+}
+
+.topNav {
+  display: flex;
+  gap: var(--margin-md);
+  margin-top: var(--margin-md);
+}
+
+.topNav a {
+  color: var(--main-color);
+  text-decoration: none;
+  font-family: var(--eg-font);
+}
+
+.workContainer {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--padding-xxxl) 0;
+  gap: var(--margin-xl);
+  border-top: 1px solid var(--main-color);
+  margin-bottom: var(--margin-xxl);
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.workSliderContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  width: 100%;
+  max-width: 900px;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+.workSliderNav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--margin-sm);
+}
+
+.workSliderNav.left {
+  order: 1;
+}
+
+.workCard {
+  order: 2;
+  flex-grow: 1;
+  margin: 4px;
+  position: relative;
+  z-index: 1;
+  min-width: 232px;
+}
+
+.workSliderNav.right {
+  order: 3;
+}
+
+.workSliderArrowButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.workSliderArrowButton Image {
+  width: 24px;
+  height: 24px;
+}
+
+.workCard {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-lg) var(--padding-lg) var(--padding-xl);
+  gap: var(--margin-sm);
+  background: var(--bg-color);
+  border: 1px solid var(--main-color);
+  box-shadow: 4px 4px 0px var(--main-color);
+  border-radius: var(--borderradius-md);
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+  z-index: 100;
+  min-height: 300px;
+}
+
+.projectCardContents {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--margin-md);
+  background-color: #0000;
+}
+
+.projectCardImage {
+  width: 100%;
+  position: relative;
+  padding-top: 100%;
+  overflow: hidden;
+}
+
+.projectCardImage img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.projectCardImagePlaceholder {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--gray100);
+  border-radius: var(--borderradius-sm);
+  margin: 0;
+}
+
+.projectCardTitleArea {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: var(--margin-sm);
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.projectCardTitle {
+  font-style: normal;
+  font-weight: 350;
+  font-size: var(--fontsize-md);
+  line-height: var(--fontsize-lg);
+  color: var(--main-color);
+}
+
+.projectCardTagArea {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--margin-sm);
+  background-color: #0000;
+}
+
+.projectCardTag {
+  font-family: var(--eg-font);
+  font-size: var(--fontsize-sm);
+  color: var(--gray500);
+  background-color: #0000;
+}
+
+.viewProjectsLink {
+  font-family: var(--eg-font);
+  font-weight: 600;
+  color: var(--main-color);
+  text-decoration: underline;
+  margin-top: var(--margin-md);
+}
+
+.aboutContainer {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--padding-xxxl);
+  gap: var(--margin-xl);
+  background: var(--gray50);
+  border: 1px solid var(--main-color);
+  border-radius: 9999px 9999px 0 0;
+}
+
+.aboutContainerInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  gap: var(--margin-lg);
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  background-color: #0000;
+}
+
+.aboutContainerInner p {
+  font-style: normal;
+  font-weight: 350;
+  font-size: var(--fontsize-sm);
+  line-height: var(--fontsize-lg);
+  display: flex;
+  align-items: center;
+  letter-spacing: .04em;
+  color: var(--main-color);
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  background-color: #0000;
+}
+
+
+/*# sourceMappingURL=app_styles_home_0b55ac.css.map*/
