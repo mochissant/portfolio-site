@@ -186,7 +186,7 @@ export function HomepageContent() {
         <h2 className="h2Eg">About</h2>
         <div className="aboutContainerInner">
           <div className="aboutImage">
-            <Image src="../../public/images/profile.jpg" alt="profile" width={200} height={200} />
+            <Image src="/public/images/profile.jpg" alt="profile" width={200} height={200} />
           </div>
           <p>1999年生まれ、東京都在住。大学時代に謎解き制作サークルに所属し、印刷物デザインを担当。就職後もデザイナーとして働く傍ら、謎解きイベントの企画・運営・デザインに携わる。</p>
         </div>
