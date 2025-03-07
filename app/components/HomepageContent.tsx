@@ -76,7 +76,9 @@ export function HomepageContent() {
             <button className="workSliderArrowButton" onClick={() => setIndex((prev) => prev - 1)}>
               <Image 
                 src="/assets/icons/left.svg" 
-                alt="left arrow" 
+                alt="left arrow"
+                width={24}
+                height={24}
               />
             </button>
           </div>
@@ -85,7 +87,9 @@ export function HomepageContent() {
             <button className="workSliderArrowButton" onClick={() => setIndex((prev) => prev + 1)}>
               <Image 
                 src="/assets/icons/right.svg" 
-                alt="right arrow" 
+                alt="right arrow"
+                width={24}
+                height={24}
               />
             </button>
           </div>
