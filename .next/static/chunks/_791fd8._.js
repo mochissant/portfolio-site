@@ -626,7 +626,11 @@ function HomepageContent() {
                                     alt: "profile",
                                     width: 200,
                                     height: 200,
-                                    priority: true
+                                    priority: true,
+                                    style: {
+                                        width: '100%',
+                                        height: 'auto'
+                                    }
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/HomepageContent.tsx",
                                     lineNumber: 189,
@@ -641,7 +645,7 @@ function HomepageContent() {
                                 children: "1999年生まれ、東京都在住。大学時代に謎解き制作サークルに所属し、印刷物デザインを担当。就職後もデザイナーとして働く傍ら、謎解きイベントの企画・運営・デザインに携わる。"
                             }, void 0, false, {
                                 fileName: "[project]/app/components/HomepageContent.tsx",
-                                lineNumber: 191,
+                                lineNumber: 198,
                                 columnNumber: 11
                             }, this)
                         ]

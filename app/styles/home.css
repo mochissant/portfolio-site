@@ -281,6 +281,7 @@
   align-self: center;
   flex-grow: 0;
   margin: 0 auto;
+  padding: var(--padding-xxl);
 }
 
 .aboutImage img{
