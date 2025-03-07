@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from 'next/link';
@@ -25,7 +24,7 @@ export function HomepageContent() {
   useEffect(() => {
     console.log('Current index:', index);
     console.log('Current word:', shuffledWords[index]);
-    
+
     if (index < shuffledWords.length) {
       const fadeOutTimeout = setTimeout(() => {
         setIsFadingOut(true);
@@ -68,13 +67,13 @@ export function HomepageContent() {
           <p className="animatedWord">design</p>
         </div>
       </div>
-      
+
       <div className="workContainer">
         <h2 className="h2Eg">WORK</h2>
         <div className="workSliderContainer">
           <div className="workSliderArrow">
             <button className="workSliderArrowButton" onClick={() => setIndex((prev) => prev - 1)}>
-              <img src="app/assets/icons/left.svg" alt="left arrow"/>
+              <img src="/app/assets/icons/left.svg" alt="left arrow" />
             </button>
           </div>
         </div>
