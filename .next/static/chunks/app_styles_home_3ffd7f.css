@@ -156,36 +156,33 @@
 
 .projectCardImagePlaceholder {
   width: 100%;
-  height: 200px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   background-color: var(--gray100);
   border-radius: var(--borderradius-sm);
+  margin: 0;
 }
 
 .projectCardTitleArea {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
   gap: var(--margin-sm);
-  background-color: #0000;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
 }
 
 .projectCardTitle {
-  font-family: var(--main-font);
-  font-weight: 600;
-  font-size: var(--fontsize-lg);
-  color: var(--main-color);
-  background-color: #0000;
-}
-
-.projectCardDescription {
-  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 350;
   font-size: var(--fontsize-md);
+  line-height: var(--fontsize-lg);
   color: var(--main-color);
-  background-color: #0000;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .projectCardTagArea {
