@@ -82,7 +82,8 @@ export function HomepageContent() {
               />
             </button>
           </div>
-
+          <div className="workCard">
+          </div>
           <div className="workSliderArrow">
             <button className="workSliderArrowButton" onClick={() => setIndex((prev) => prev + 1)}>
               <Image 

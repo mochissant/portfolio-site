@@ -164,7 +164,9 @@ function HomepageContent() {
                                     onClick: ()=>setIndex((prev)=>prev - 1),
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                         src: "/assets/icons/left.svg",
-                                        alt: "left arrow"
+                                        alt: "left arrow",
+                                        width: 24,
+                                        height: 24
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/HomepageContent.tsx",
                                         lineNumber: 77,
@@ -181,26 +183,35 @@ function HomepageContent() {
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "workCard"
+                            }, void 0, false, {
+                                fileName: "[project]/app/components/HomepageContent.tsx",
+                                lineNumber: 85,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "workSliderArrow",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                     className: "workSliderArrowButton",
                                     onClick: ()=>setIndex((prev)=>prev + 1),
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                         src: "/assets/icons/right.svg",
-                                        alt: "right arrow"
+                                        alt: "right arrow",
+                                        width: 24,
+                                        height: 24
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/HomepageContent.tsx",
-                                        lineNumber: 86,
+                                        lineNumber: 89,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/HomepageContent.tsx",
-                                    lineNumber: 85,
+                                    lineNumber: 88,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/components/HomepageContent.tsx",
-                                lineNumber: 84,
+                                lineNumber: 87,
                                 columnNumber: 11
                             }, this)
                         ]
@@ -214,7 +225,7 @@ function HomepageContent() {
                         children: "View Projects"
                     }, void 0, false, {
                         fileName: "[project]/app/components/HomepageContent.tsx",
-                        lineNumber: 93,
+                        lineNumber: 98,
                         columnNumber: 9
                     }, this)
                 ]
@@ -231,20 +242,20 @@ function HomepageContent() {
                         children: "About"
                     }, void 0, false, {
                         fileName: "[project]/app/components/HomepageContent.tsx",
-                        lineNumber: 99,
+                        lineNumber: 104,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         children: "自己紹介やプロフィールをここに記載します。"
                     }, void 0, false, {
                         fileName: "[project]/app/components/HomepageContent.tsx",
-                        lineNumber: 100,
+                        lineNumber: 105,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/components/HomepageContent.tsx",
-                lineNumber: 98,
+                lineNumber: 103,
                 columnNumber: 7
             }, this)
         ]
