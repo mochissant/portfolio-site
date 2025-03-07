@@ -60,10 +60,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 64px 0px;
+  padding: 64px var(--padding-lg);
   gap: 32px;
   border-top: 1px solid #212121;
   margin-bottom: var(--margin-xxl);
+  width: 100%;
+  max-width: 100vw; /* 画面幅以上にならないように制限 */
+  overflow-x: hidden; /* 横方向のはみ出しを防止 */
 }
 
 .workSliderContainer{
@@ -74,6 +77,21 @@
   padding: 0px;
   width: 100%;
   max-width: 900px;
+  box-sizing: border-box; /* paddingを含めた幅計算に */
+  overflow-x: hidden; /* 横方向のはみ出しを防止 */
+}
+
+/* モバイル表示時のスタイル調整 */
+@media (max-width: 768px) {
+  .workSliderContainer {
+    padding: 0 var(--padding-md);
+    width: 100%;
+  }
+  
+  .workCard {
+    min-height: 250px; /* モバイル表示時はカードの高さを調整 */
+    width: 100%;
+  }
 }
 
 /* ワークスライダーのナビゲーション部分のスタイル */
