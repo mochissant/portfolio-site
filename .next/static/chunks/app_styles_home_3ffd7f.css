@@ -89,4 +89,16 @@
   flex-grow: 0;
 }
 
+.workSliderArrowButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.workSliderArrowButton img {
+  width: 24px;
+  height: 24px;
+}
+
 /*# sourceMappingURL=app_styles_home_3ffd7f.css.map*/
