@@ -1,12 +1,13 @@
 @import "./base.css";
 
 .h2Eg {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--eg-font);
   font-style: normal;
   font-weight: 600;
-  font-size: 32px;
-  line-height: 39px;
+  font-size: var(--fontsize-lg);
+  line-height: var(--fontsize-xl);
   color: var(--main-color);
+  background-color: transparent;
 }
 
 .topContainer {
@@ -44,14 +45,6 @@
   color: var(--main-color);
   text-decoration: none;
   font-family: var(--eg-font);
-}
-
-.aboutSection {
-  width: 100%;
-  padding: var(--padding-xl);
-  border-top: 1px solid var(--main-color);
-  margin-top: var(--margin-xxl);
-  margin-bottom: var(--margin-xxl);
 }
 
 .workContainer{
@@ -151,6 +144,7 @@
   background-color: transparent;
 }
 
+
 /* プロジェクト画像エリアのスタイル */
 .projectCardImage {
   width: 100%;
@@ -221,4 +215,53 @@
   color: var(--main-color);
   text-decoration: underline;
   margin-top: var(--margin-md);
+}
+
+.aboutContainer{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--padding-xxxl);
+  gap: var(--margin-xl);
+
+  background: var(--gray50);
+  border: 1px solid var(--main-color);
+  border-radius: 9999px 9999px 0px 0px;
+
+}
+
+.aboutContainerInner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: var(--margin-lg);
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  background-color: transparent;
+}
+
+.aboutContainerInner p{
+  /* 1999年生まれ、東京都在住。大学時代に謎解き制作サークルに所属し、印刷物デザインを担当。就職後もデザイナーとして働く傍ら、謎解きイベントの企画・運営・デザインに携わる。 */
+  font-style: normal;
+  font-weight: 350;
+  font-size: var(--fontsize-sm);
+  line-height: var(--fontsize-lg);
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+
+  color: var(--main-color);
+
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+
+  background-color: transparent;
+
 }

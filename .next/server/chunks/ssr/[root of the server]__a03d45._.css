@@ -211,12 +211,13 @@ header {
 
 /* [project]/app/styles/home.css [app-client] (css, ) */
 .h2Eg {
-  font-family: Montserrat, sans-serif;
+  font-family: var(--eg-font);
   font-style: normal;
   font-weight: 600;
-  font-size: 32px;
-  line-height: 39px;
+  font-size: var(--fontsize-lg);
+  line-height: var(--fontsize-xl);
   color: var(--main-color);
+  background-color: #0000;
 }
 
 .topContainer {
@@ -254,14 +255,6 @@ header {
   color: var(--main-color);
   text-decoration: none;
   font-family: var(--eg-font);
-}
-
-.aboutSection {
-  width: 100%;
-  padding: var(--padding-xl);
-  border-top: 1px solid var(--main-color);
-  margin-top: var(--margin-xxl);
-  margin-bottom: var(--margin-xxl);
 }
 
 .workContainer {
@@ -420,6 +413,48 @@ header {
   color: var(--main-color);
   text-decoration: underline;
   margin-top: var(--margin-md);
+}
+
+.aboutContainer {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--padding-xxxl);
+  gap: var(--margin-xl);
+  background: var(--gray50);
+  border: 1px solid var(--main-color);
+  border-radius: 9999px 9999px 0 0;
+}
+
+.aboutContainerInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  gap: var(--margin-lg);
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  background-color: #0000;
+}
+
+.aboutContainerInner p {
+  font-style: normal;
+  font-weight: 350;
+  font-size: var(--fontsize-sm);
+  line-height: var(--fontsize-lg);
+  display: flex;
+  align-items: center;
+  letter-spacing: .04em;
+  color: var(--main-color);
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  background-color: #0000;
 }
 
 
