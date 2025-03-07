@@ -5,6 +5,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { MochissantLogo } from "../assets/logos";
+import Modal from "./Modal";
 
 export default function Header() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -23,6 +24,7 @@ export default function Header() {
       <button onClick={toggleModalOpen}>
         <HamburgerIcon isOpen={isModalOpen} />
       </button>
+      <Modal isOpen={isModalOpen} onClose={toggleModalOpen} />
     </header>
   );
 }

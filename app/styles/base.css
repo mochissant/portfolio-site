@@ -18,6 +18,8 @@
   --purple: #be84b8;
   --black: #212121;
   --white: #ffffff;
+  --background-color: var(--white);
+  --main-color: var(--black);
 
   --main-color: var(--black);
   --main-bg-color: var(--white);
