@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -73,7 +74,12 @@ export function HomepageContent() {
         <div className="workSliderContainer">
           <div className="workSliderArrow">
             <button className="workSliderArrowButton" onClick={() => setIndex((prev) => prev - 1)}>
-              <img src="/app/assets/icons/left.svg" alt="left arrow" />
+              <Image 
+                src="/app/assets/icons/left.svg" 
+                alt="left arrow" 
+                width={24} 
+                height={24} 
+              />
             </button>
           </div>
         </div>
