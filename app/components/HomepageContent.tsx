@@ -72,7 +72,7 @@ export function HomepageContent() {
       <div className="workContainer">
         <h2 className="h2Eg">WORK</h2>
         <div className="workSliderContainer">
-          <div className="workSliderArrow">
+          <div className="workSliderNav left">
             <button className="workSliderArrowButton" onClick={() => setIndex((prev) => prev - 1)}>
               <Image 
                 src="/assets/icons/left.svg" 
@@ -83,8 +83,9 @@ export function HomepageContent() {
             </button>
           </div>
           <div className="workCard">
+            {/* カードコンテンツ */}
           </div>
-          <div className="workSliderArrow">
+          <div className="workSliderNav right">
             <button className="workSliderArrowButton" onClick={() => setIndex((prev) => prev + 1)}>
               <Image 
                 src="/assets/icons/right.svg" 
