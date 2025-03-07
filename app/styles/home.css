@@ -246,7 +246,6 @@
 }
 
 .aboutContainerInner p{
-  /* 1999年生まれ、東京都在住。大学時代に謎解き制作サークルに所属し、印刷物デザインを担当。就職後もデザイナーとして働く傍ら、謎解きイベントの企画・運営・デザインに携わる。 */
   font-style: normal;
   font-weight: 350;
   font-size: var(--fontsize-sm);
@@ -264,4 +263,32 @@
 
   background-color: transparent;
 
+}
+
+.aboutImage{
+  padding: var(--padding-xxl);
+  width: 100%;
+  aspect-ratio: 1/1;
+  position: relative;
+  padding-top: 100%; /* この指定により1:1のアスペクト比を強制 */
+  overflow: hidden; /* はみ出した画像を隠す */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: var(--main-bg-color);
+  border-radius: var(--borderradiu-xs);
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.aboutImage img{
+  margin: var(--margin-xl);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - var(--margin-xl) * 2);
+  height: calc(100% - var(--margin-xl) * 2);
+  object-fit: cover;
 }

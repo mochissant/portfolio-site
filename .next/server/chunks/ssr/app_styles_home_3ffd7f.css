@@ -246,4 +246,32 @@
   background-color: #0000;
 }
 
+.aboutImage {
+  padding: var(--padding-xxl);
+  width: 100%;
+  aspect-ratio: 1;
+  position: relative;
+  padding-top: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: var(--main-bg-color);
+  border-radius: var(--borderradiu-xs);
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.aboutImage img {
+  margin: var(--margin-xl);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - var(--margin-xl) * 2);
+  height: calc(100% - var(--margin-xl) * 2);
+  object-fit: cover;
+}
+
 /*# sourceMappingURL=app_styles_home_3ffd7f.css.map*/
