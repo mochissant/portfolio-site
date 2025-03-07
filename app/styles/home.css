@@ -266,29 +266,26 @@
 }
 
 .aboutImage{
-  padding: var(--padding-xxl);
   width: 100%;
+  max-width: 300px; /* 最大幅を制限 */
   aspect-ratio: 1/1;
   position: relative;
-  padding-top: 100%; /* この指定により1:1のアスペクト比を強制 */
   overflow: hidden; /* はみ出した画像を隠す */
   display: flex;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;
   background: var(--main-bg-color);
   border-radius: var(--borderradiu-xs);
   flex: none;
   order: 0;
-  align-self: stretch;
+  align-self: center;
   flex-grow: 0;
+  margin: 0 auto;
 }
 
 .aboutImage img{
-  margin: var(--margin-xl);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: calc(100% - var(--margin-xl) * 2);
-  height: calc(100% - var(--margin-xl) * 2);
+  width: 100% !important;
+  height: 100% !important;
   object-fit: cover;
+  position: relative !important;
 }
