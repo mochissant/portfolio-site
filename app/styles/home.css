@@ -150,14 +150,17 @@
 /* プロジェクト画像エリアのスタイル */
 .projectCardImage {
   width: 100%;
-  aspect-ratio: 1/1;
-  object-fit: cover;
+  position: relative;
+  padding-top: 100%; /* この指定により1:1のアスペクト比を強制 */
   overflow: hidden; /* はみ出した画像を隠す */
 }
 
 .projectCardImage img{
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  aspect-ratio: 1/1;
+  height: 100%;
   object-fit: cover;
 }
 

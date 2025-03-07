@@ -143,9 +143,9 @@ export function HomepageContent() {
                       <Image
                         src={projectImages[latestProjects[projectIndex].slug]}
                         alt={latestProjects[projectIndex].title}
-                        width={200}
-                        height={200}
-                        style={{ objectFit: 'cover' }} // 画像のサイズ調整
+                        layout="fill"
+                        objectFit="cover"
+                        sizes="100%"
                       />
                     ) : (
                       // 画像がない場合はプレースホルダーを表示
