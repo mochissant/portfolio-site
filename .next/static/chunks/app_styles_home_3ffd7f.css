@@ -73,7 +73,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 8px;
+  padding: 0;
   width: 100%;
   max-width: 900px;
   box-sizing: border-box;
@@ -97,6 +97,7 @@
   margin: 4px;
   position: relative;
   z-index: 1;
+  min-width: 232px;
 }
 
 .workSliderNav.right {
@@ -198,7 +199,7 @@
 .projectCardTag {
   font-family: var(--eg-font);
   font-size: var(--fontsize-sm);
-  color: var(--main-color);
+  color: var(--gray500);
   background-color: #0000;
 }
 

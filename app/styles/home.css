@@ -74,18 +74,11 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 8px; /* 影の表示に必要な余白を追加 */
+  padding: 0; /* 影の表示に要な余白を追加 */
   width: 100%;
   max-width: 900px;
   box-sizing: border-box; /* paddingを含めた幅計算に */
   overflow: visible; /* 影が見えるようにオーバーフロー設定を変更 */
-}
-
-/* 画面幅が狭い場合のレスポンシブ対応 */
-@media (max-width: 600px) {
-  .workSliderContainer {
-    padding: 4px; /* 小さい画面では余白を減らす */
-  }
 }
 
 /* ワークスライダーのナビゲーション部分のスタイル */
@@ -107,9 +100,8 @@
   flex-grow: 1;
   margin: 4px; /* 影が見えるように余白を追加 */
   position: relative; /* 影の表示に必要な位置指定 */
-  z-index: 1; /* 重なり順を調整 */
-  min-width: 280px; /* カードの最小横幅を設定 - スマホ表示でも適切なサイズに */
-  width: 100%; /* 親要素の幅に合わせる */
+  z-index: 1; /* 重なり順 を調整 */
+  min-width: 232px; /* カードの最小横幅を設定 - スマホ表示でも適切なサイズに */
 }
 
 /* 右ナビゲーションの位置指定 - flexboxの順序を3に */
@@ -219,7 +211,7 @@
 .projectCardTag {
   font-family: var(--eg-font);
   font-size: var(--fontsize-sm);
-  color: var(--main-color);
+  color: var(--gray500);
   background-color: transparent;
 }
 
