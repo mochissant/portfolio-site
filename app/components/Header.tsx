@@ -23,12 +23,6 @@ export default function Header() {
       <button onClick={toggleModalOpen}>
         <HamburgerIcon isOpen={isModalOpen} />
       </button>
-      {isModalOpen && (
-        <nav className="mobileNav">
-          <Link href="/work">Works</Link>
-          <Link href="/#about">About</Link>
-        </nav>
-      )}
     </header>
   );
 }

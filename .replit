@@ -12,3 +12,14 @@ externalPort = 3001
 
 [nix]
 channel = "stable-24_05"
+
+[workflows]
+runButton = "Dev"
+
+[[workflows.workflow]]
+name = "Dev"
+author = 39536624
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm run dev"
