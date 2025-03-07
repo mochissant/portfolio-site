@@ -148,7 +148,7 @@ export function HomepageContent() {
                         sizes="100%"
                       />
                     ) : (
-                      // 画像がない場合はプレースホルダーを表示
+                      // 画像がない場合はプレースホルダーを表示（1:1のアスペクト比を維持）
                       <div className="projectCardImagePlaceholder"></div>
                     )}
                   </div>
