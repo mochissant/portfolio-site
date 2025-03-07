@@ -5,30 +5,17 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0 var(--padding-md);
+  align-items: center;
+  padding: 0 var(--padding-lg);
   gap: var(--padding-xl);
   position: fixed;
   z-index: 9999;
-  border-bottom: 1px solid var(--main-color);
+  background-color: var(--main-bg-color);
+  /*border-bottom: 1px solid var(--main-color);*/
 }
 
-.moveHeader {
-  height: var(--header-height);
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.moveHeader svg {
-  height: calc(var(--header-height) - 16px);
-  width: auto;
-  display: block;
-}
-
-.moveHeader svg path {
-  fill: currentColor;
-  stroke-width: inherit;
-  stroke: currentColor;
+.headerLogo{
+  height: 24px;
 }
 
 .header-h1 {

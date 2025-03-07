@@ -1,0 +1,73 @@
+/* [project]/app/styles/projects.css [app-client] (css, ) */
+.projectListContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--margin-md);
+  width: 100%;
+  padding-top: var(--padding-lg);
+}
+
+.tagButtonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  gap: var(--margin-md);
+}
+
+.tagButton {
+  background-color: var(--white);
+  padding: var(--padding-lg), var(--padding-sm);
+}
+
+.tagButtonSelected {
+  background-color: var(--black);
+  color: var(--white);
+  padding: var(--padding-lg), var(--padding-sm);
+}
+
+.projectCard {
+  width: 100%;
+  padding: var(--padding-md);
+  padding-bottom: var(--padding-lg);
+  display: flex;
+  gap: var(--margin-sm);
+  border-radius: var(--borderradius-md);
+  background-color: var(--white);
+}
+
+.projectCardContents {
+  width: 100%;
+  padding: var(--padding-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--margin-md);
+  background-color: #0000;
+}
+
+.projectDetailContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--margin-md);
+  align-items: left;
+}
+
+.projectDetailImage {
+  width: 100vw;
+  margin-left: calc(var(--margin-md) * -.5);
+  margin-right: calc(var(--margin-md) * -.5);
+  height: 56.25%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.projectDetailImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=app_styles_projects_3ffd7f.css.map*/

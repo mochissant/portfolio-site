@@ -15,12 +15,13 @@
   /*色系*/
   --gray50: #f6f7f8;
   --gray100: #e8e8e8;
+  --gray500: #4a4a4a;
   --purple: #be84b8;
   --black: #212121;
   --white: #ffffff;
 
   --main-color: var(--black);
-  --main-bg-color: var(--gray50);
+  --main-bg-color: var(--white);
 
   /*サイズ系変数*/
   --margin-sm: 8px;

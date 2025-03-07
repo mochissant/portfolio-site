@@ -271,7 +271,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$logos$2f$in
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$icons$2f$index$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/app/assets/icons/index.ts [app-client] (ecmascript)");
 ;
 var _s = __turbopack_refresh__.signature();
-'use client';
+"use client";
 ;
 ;
 ;
@@ -287,59 +287,39 @@ function Header() {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                 href: "/",
-                className: "moveHeader header-h1",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "moveHeader",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$logos$2f$index$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["MochissantLogo"], {
-                            className: "h-6",
-                            color: "var(--main-color)"
-                        }, void 0, false, {
-                            fileName: "[project]/app/components/Header.tsx",
-                            lineNumber: 23,
-                            columnNumber: 13
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$logos$2f$index$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["MochissantCircleLogo"], {
-                            className: "h-6",
-                            color: "var(--main-color)"
-                        }, void 0, false, {
-                            fileName: "[project]/app/components/Header.tsx",
-                            lineNumber: 24,
-                            columnNumber: 13
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$logos$2f$index$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["EgMochissantLogo"], {
-                            className: "h-6",
-                            color: "var(--main-color)"
-                        }, void 0, false, {
-                            fileName: "[project]/app/components/Header.tsx",
-                            lineNumber: 25,
-                            columnNumber: 13
-                        }, this)
-                    ]
-                }, void 0, true, {
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$logos$2f$index$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["MochissantLogo"], {
+                        className: "headerLogo",
+                        color: "var(--main-color)"
+                    }, void 0, false, {
+                        fileName: "[project]/app/components/Header.tsx",
+                        lineNumber: 26,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
                     fileName: "[project]/app/components/Header.tsx",
-                    lineNumber: 22,
-                    columnNumber: 11
+                    lineNumber: 25,
+                    columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/components/Header.tsx",
-                lineNumber: 21,
-                columnNumber: 9
+                lineNumber: 24,
+                columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                 onClick: toggleModalOpen,
                 children: isModalOpen ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$icons$2f$index$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CloseIcon"], {}, void 0, false, {
                     fileName: "[project]/app/components/Header.tsx",
-                    lineNumber: 29,
-                    columnNumber: 18
+                    lineNumber: 30,
+                    columnNumber: 24
                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$icons$2f$index$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["MenuIcon"], {}, void 0, false, {
                     fileName: "[project]/app/components/Header.tsx",
-                    lineNumber: 29,
-                    columnNumber: 34
+                    lineNumber: 30,
+                    columnNumber: 40
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/components/Header.tsx",
-                lineNumber: 28,
+                lineNumber: 29,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$Modal$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -347,13 +327,13 @@ function Header() {
                 onClose: toggleModalOpen
             }, void 0, false, {
                 fileName: "[project]/app/components/Header.tsx",
-                lineNumber: 31,
+                lineNumber: 32,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/components/Header.tsx",
-        lineNumber: 20,
+        lineNumber: 23,
         columnNumber: 5
     }, this);
 }

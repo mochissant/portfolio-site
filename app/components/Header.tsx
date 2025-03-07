@@ -1,34 +1,31 @@
-
 // このファイルはサイト全体のヘッダーコンポーネントを提供します
-'use client'
+"use client";
 
-import { useState } from 'react';
-import Modal from './Modal';
-import Link from 'next/link'
+import { useState } from "react";
+import Modal from "./Modal";
+import Link from "next/link";
 import { motion, useTransform, useMotionValue } from "framer-motion";
-import { MochissantLogo, MochissantCircleLogo, EgMochissantLogo } from '../assets/logos';
-import { MenuIcon, CloseIcon } from '../assets/icons';
+import { MochissantLogo,} from "../assets/logos";
+import { HamburgerIcon } from "../assets/icons/index";
 
 export default function Header() {
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleModalOpen = () => {
-    setIsModalOpen(!isModalOpen)
-  }
-  
+    setIsModalOpen(!isModalOpen);
+  };
+
   return (
     <header>
-        <Link href="/" className="moveHeader header-h1">
-          <div className="moveHeader">
-            <MochissantLogo className="h-6" color="var(--main-color)" />
-            <MochissantCircleLogo className="h-6" color="var(--main-color)" />
-            <EgMochissantLogo className="h-6" color="var(--main-color)" />
-          </div>
-        </Link>
+      <Link href="/">
+        <div>
+          <MochissantLogo className="headerLogo" color="var(--main-color)" />
+        </div>
+      </Link>
       <button onClick={toggleModalOpen}>
-  {isModalOpen ? <CloseIcon /> : <MenuIcon />}
-</button>
+        {isModalOpen ? <CloseIcon /> : <MenuIcon />}
+      </button>
       <Modal isOpen={isModalOpen} onClose={toggleModalOpen} />
     </header>
-  )
+  );
 }

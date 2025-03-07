@@ -1,0 +1,70 @@
+/* [project]/app/styles/base.css [app-client] (css, ) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--main-bg-color);
+}
+
+:root {
+  --main-font: "Noto Sans JP", sans-serif;
+  --eg-font: "Lato", sans-serif;
+  --gray50: #f6f7f8;
+  --gray100: #e8e8e8;
+  --gray500: #4a4a4a;
+  --purple: #be84b8;
+  --black: #212121;
+  --white: #fff;
+  --main-color: var(--black);
+  --main-bg-color: var(--white);
+  --margin-sm: 8px;
+  --margin-md: 16px;
+  --margin-lg: 24px;
+  --margin-xl: 32px;
+  --margin-xxl: 64px;
+  --padding-sm: 4px;
+  --padding-md: 8px;
+  --padding-lg: 16px;
+  --padding-xl: 24px;
+  --padding-xxl: 32px;
+  --button-height: 44px;
+  --header-height: 48px;
+  --fontsize-sm: 12px;
+  --fontsize-md: 16px;
+  --fontsize-lg: 20px;
+  --fontsize-xl: 24px;
+  --borderradius-sm: 4px;
+  --borderradius-md: 8px;
+  --borderradius-lg: 12px;
+  --borderradius-all: 999px;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--gray50);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  z-index: 0;
+  font-family: var(--main-font);
+}
+
+a {
+  all: unset;
+  display: inline;
+}
+
+h1 {
+  font-family: var(--main-font);
+  color: var(--main-color);
+}
+
+button {
+  min-height: 44px;
+  min-width: 44px;
+  border: none;
+  font-family: var(--eg-font);
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=app_styles_base_3ffd7f.css.map*/

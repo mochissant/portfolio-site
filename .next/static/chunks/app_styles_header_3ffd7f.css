@@ -1,0 +1,27 @@
+/* [project]/app/styles/header.css [app-client] (css, ) */
+header {
+  height: var(--header-height);
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--padding-lg);
+  gap: var(--padding-xl);
+  position: fixed;
+  z-index: 9999;
+  background-color: var(--main-bg-color);
+}
+
+.headerLogo {
+  height: 24px;
+}
+
+.header-h1 {
+  font-family: var(--eg-font);
+  font-weight: 400;
+  font-size: var(--fontsize-md);
+  text-decoration: none !important;
+}
+
+/*# sourceMappingURL=app_styles_header_3ffd7f.css.map*/
