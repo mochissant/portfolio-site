@@ -1,5 +1,3 @@
-@import "./styles.css";
-
 .header{
     display: flex;
     flex-direction: row;
