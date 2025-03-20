@@ -1,5 +1,6 @@
 'use client';
 import styles from "../styles/header.module.css";
+import Image from 'next/image';
 //import {useState} from "react";
 
 export default function Header(){
@@ -7,7 +8,7 @@ export default function Header(){
 
     return(
         <header className={styles.header}>
-            <img src="/logo/mochissant-logo.svg" alt="もちわっさん" className={styles.logo} />
+            <Image src="/logo/mochissant-logo.svg" alt="もちわっさん" priority className={styles.logo} />
         </header>
     );
 }
