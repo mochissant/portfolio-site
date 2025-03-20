@@ -1,0 +1,25 @@
+@import "./styles.css";
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 8px;
+    gap: 219px;
+
+    position: absolute;
+    width: 100vw;
+    height: 52px;
+    left: 0px;
+    top: 0px;
+
+    mix-blend-mode: difference;
+
+}
+
+.logo{
+    height:24px;
+    width:111px;
+    filter: invert(1) brightness(1000%);
+}

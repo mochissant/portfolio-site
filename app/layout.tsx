@@ -1,4 +1,4 @@
-
+import './styles/styles.css';
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import PathProvider from "./components/PathProvider";
@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     width: 'device-width',
     initialScale: 1,
     maximumScale: 1,
+  },
+  icons: {
+    icon: '/logo/mochissant-circle-logo.svg',
   },
 };
 

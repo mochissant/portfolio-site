@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap');
+
+/* CSS Reset & 基本設定 */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* 全体に適用するグローバルなスタイル */
+html, body, #__next {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    color: #000;
+    line-height: 1.6;
+}
+
+/* リンクのスタイル */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* モバイル対応のためのフォントサイズ調整 */
+body {
+    font-size: 16px;
+}
+
+/* ヘッダー、見出し用フォント設定（任意） */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
