@@ -8,7 +8,7 @@ export default function Header(){
 
     return(
         <header className={styles.header}>
-            <Image src="/logo/mochissant-logo.svg" alt="もちわっさん" priority className={styles.logo} />
+            <Image src="/logo/mochissant-logo.svg" alt="もちわっさん" width={111} height={24} priority className={styles.logo} />
         </header>
     );
 }

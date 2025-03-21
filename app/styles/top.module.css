@@ -1,0 +1,252 @@
+@import "./globals.css";
+.container{
+    display: flex;
+    flex-direction: column;
+    gap:0;
+    width: 100vw;
+}
+.mainContainer{
+    display:flex;
+    flex-direction: column;
+    gap:0;
+}
+
+.top{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 160px var(--spacing-xl) 0 var(--spacing-xl);
+    gap: var(--spacing-md);
+
+    width: 100vw;
+    height: fit-content;
+    
+}
+
+.topBox{
+     box-sizing: border-box;
+
+    width: auto;
+    height: 36px;
+
+    border: 1px solid #212121;
+
+    /* オートレイアウト内部 */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+
+    transform: scaleX(0); /* 最初は横幅がゼロ */
+    transition: transform 1s ease-out, max-width 1s ease-out;
+    transform-origin: left; /* 左側から広がる */
+}
+
+.topBox.expanded {
+    transform: scaleX(1); /* 横方向にフルサイズで表示 */
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.design {
+    width: fit-content;
+    height: fit-content;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.04em;
+
+    color: var(--black);
+    opacity: 0;
+    animation: fadeIn 2s ease-out 0.8s forwards; /* 4秒遅延後に2秒かけてフェードイン */
+}
+
+.message{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px;
+    gap: 10px;
+
+    width: 100vw;
+    height:fit-content;
+    
+    /* body/bodyS */
+    font-family: 'Noto Sans JP';
+    font-style: normal;
+    font-weight: 350;
+    font-size: 14px;
+    line-height: 20px;
+    /* ボックスの高さと同一、または143% */
+    display: flex;
+    align-items: flex-start;
+    letter-spacing: 0.04em;
+
+    color: var(--main-color);
+}
+
+.mainMessage{
+
+    /* body/bodyM */
+    font-family: 'Noto Sans JP';
+    font-style: normal;
+    font-weight: 350;
+    font-size: 16px;
+    line-height: 24px;
+    /* ボックスの高さと同一、または150% */
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.04em;
+
+    color: var(--main-color);
+
+}
+
+@keyframes slideIn {
+    0% { transform: translateY(64px);
+         opacity: 0;
+         color: white;
+        filter:none;}
+    100% { transform: translateY(0);
+         opacity: 1;
+        color:var(--main-color);
+        filter: drop-shadow(0px 4px 4px rgba(109, 109, 109, 0.2));}
+}
+
+.update {
+    z-index: 5;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: var(--spacing-xl) var(--spacing-lg);
+    padding: var(--spacing-md) var(--spacing-lg);
+    gap: var(--spacing-md);
+    width: auto;
+    height: fit-content;
+    border: 1px solid var(--main-color);
+    background-color: var(--main-bg-color);
+    border-radius: var(--radius-all);
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    opacity: 0;
+    transform: translateY(64px);
+    animation: slideIn 0.2s ease-in-out 0.8s forwards; /* 0.8秒遅延後に1秒かけて表示 */
+}
+
+.updateInner{
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+
+    font-family: 'Noto Sans JP';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+
+    letter-spacing: 0.04em;
+    color:inherit;
+}
+
+.latestUpdate {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scrollLeft 10s linear infinite;
+    color:inherit;
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.workContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+    z-index: 10;
+}
+
+.title{
+ 
+    box-sizing: border-box;
+
+    /* オートレイアウト */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: var(--spacing-lg);
+    gap: var(--spacing-md);
+
+    width: 100%;
+    height: fit-content;
+
+    border-width: 1px 0px;
+    border-style: solid;
+    border-color: var(--main-color);
+
+    /* title/eg-h1 */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+
+    letter-spacing: 0.04em;
+
+    color: var(--main-color);
+    background-color: var(--main-bg-color);
+}
+
+.title::before{
+    content:"";
+    display: block;
+    height:8px;
+    width:8px;
+    border-radius: var(--radius-all);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--main-color);
+}
+
+.workItem{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap:-24px;
+
+    width: 100%;
+    height: fit-content;
+
+}
+
+.workImage{
+    position: relative; /* これを追加 */
+    width: 100%;
+    aspect-ratio:1/1; /* 適切な縦横比に調整 */
+    overflow: hidden; /* はみ出し防止 */
+}
+
+.workImage img{
+    object-fit: cover;
+}
