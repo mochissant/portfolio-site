@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap');
+/* globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Noto+Sans+JP:wght@100..900&display=swap');
 
 /* CSS Reset & 基本設定 */
-:global(*),
-:global(*::before),
-:global(*::after) {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
+/* カラースキームの定義 */
 :root {
     --black: #212121;
     --white: #ffffff;
@@ -18,7 +18,7 @@
     --gray100: #e8e8e8;
     --gray800: #4d4d4d;
     --main-color: var(--black);
-    --main-bg-color:var(--white);
+    --main-bg-color: var(--white);
     --radius-all: 999px;
     --spacing-md: 8px;
     --spacing-sm: 4px;
@@ -28,7 +28,7 @@
     --radius-sm: 2px;
     --radius-md: 4px;
     --radius-xl: 16px;
-  }
+}
 
 /* 全体に適用するグローバルなスタイル */
 html, body, #__next {

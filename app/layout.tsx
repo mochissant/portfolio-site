@@ -1,3 +1,5 @@
+import './styles/globals.css';  // 追加
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import PathProvider from "./components/PathProvider";
