@@ -13,7 +13,7 @@
     top: 0px;
 
     mix-blend-mode: difference;
-
+    z-index: 999;
 }
 
 .logo{

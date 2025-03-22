@@ -9,8 +9,8 @@ const geist = Geist({ subsets: ["latin"] });
 const geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Portfolio website",
+  title: "もちわっさん | ポートフォリオ",
+  description: "もちわっさんのポートフォリオサイトです",
   icons: {
     icon: '/logo/mochissant-circle-logo.svg',
   },

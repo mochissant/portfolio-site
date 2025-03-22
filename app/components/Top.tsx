@@ -1,8 +1,10 @@
 'use client';
 import { useState, useEffect } from "react";
 import Image from 'next/image';
+import {useRouter} from 'next/navigation';
 import styles from "../styles/top.module.css";
 import { projects } from "../data/projects";
+import IconButton from "./IconButton";
 
 export type UpdateInfo = {
     year: number;
@@ -17,6 +19,7 @@ export type Slug ={
 
 export default function Top() {
     const [isExpanded, setIsExpanded] = useState(false);
+    const router = useRouter();
 
     const updateInfo: UpdateInfo[] = [
         {
@@ -41,6 +44,10 @@ export default function Top() {
         return () => clearTimeout(timer);
     }, []);
 
+    const handleProjectClick = (slug: string) => {
+        router.push(`/work/project/${slug}`);
+    };
+
     return (
         <div className={styles.container}>
             <div className={styles.mainContainer}>
@@ -62,8 +69,8 @@ export default function Top() {
                 </div>
             </div>
             <div className={styles.workContainer}>
-                <div className={styles.title}>WORK</div>
-                <div className={styles.workItem}>
+                <h2 className={styles.title}>WORK</h2>
+                <div className={styles.workItemContainer}>
                 {displayedProjects.length > 0 ? (
                         displayedProjects.map((project) => (
                             <div key={project.slug} className={styles.workItem}>
@@ -76,12 +83,43 @@ export default function Top() {
                                         placeholder="blur"
                                     />
                                 </div>
+                                <div className={styles.workItemCard}>
+                                    <div className={styles.workItemNum}>
+                                        001
+                                    </div>
+                                    <div className={styles.workItemDiscription}>
+                                        <div className={styles.leftItem}>
+                                            <span className={styles.workTitle}>{project.title}</span>  
+                                            <div className={styles.workTag}>
+                                                {project.tag.join(' / ')}
+                                            </div> 
+                                        </div>
+                                        <div className={styles.rightItem}>
+                                            <IconButton variant="none" iconType="right"  onClick={() => handleProjectClick(project.slug)}/>
+                                        </div>
+                                    </div>    
+                                </div>
                             </div>
                         ))
                     ) : (
                         <div>該当するプロジェクトが見つかりませんでした。</div>
                     )}
                 </div>
+            </div>
+            <div className={styles.aboutContainer}>
+                <h2 className={styles.title}>ABOUT</h2>
+                <div className={styles.profile}>
+                    <Image 
+                        src="/images/profile.jpg" 
+                        alt="プロフィール写真" 
+                        width={120} 
+                        height={120}
+                        />
+                    1999年生まれ、東京都在住。大学時代に謎解き制作サークルに所属し、印刷物デザインを担当。就職後もデザイナーとして働く傍ら、謎解きイベントの企画・運営・デザインに携わる。
+                </div>
+            </div>
+            <div className={styles.qaContainer}>
+                <h2 className={styles.title}>Q&A</h2>
             </div>
         </div>   
     );
